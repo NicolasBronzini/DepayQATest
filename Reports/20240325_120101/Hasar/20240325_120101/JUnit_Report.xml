@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Hasar" time="4.055" tests="1" failures="0" errors="0">
+   <testsuite name="Hasar" tests="1" failures="0" errors="0" time="4.055" skipped="0" timestamp="25-03-2024T12:01:07" hostname="nicol - nicopc" id="Test Suites/Hasar">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\Users\\nicol\\Katalon Studio\\Proyectos\\Depay\\Reports\\20240325_120101\\Hasar\\20240325_120101"/>
+         <property name="logFiles" value="C:\\Users\\nicol\\Katalon Studio\\Proyectos\\Depay\\Reports\\20240325_120101\\Hasar\\20240325_120101\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="nicol - nicopc"/>
+         <property name="hostAddress" value="192.168.100.4"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="9.3.2.212"/>
+      </properties>
+      <testcase name="Test Cases/Hasar Flow/auth_token_Admin" time="3.854" classname="Test Cases/Hasar Flow/auth_token_Admin" status="PASSED">
+         <system-out><![CDATA[25-03-2024T12:01:07 - [TEST_CASE][PASSED] - Test Cases/Hasar Flow/auth_token_Admin: Test Cases/Hasar Flow/auth_token_Admin
+
+25-03-2024T12:01:07 - [TEST_STEP][PASSED] - current_user = "Hasar": null
+
+25-03-2024T12:01:08 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Flow Admin/token", ["url_base":url_base, "api_key":api_key_hasar])): Send request successfully
+
+25-03-2024T12:01:10 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240325_120101\Hasar\20240325_120101\requests\main\0.har
+
+25-03-2024T12:01:11 - [MESSAGE][PASSED] - Send request successfully
+
+25-03-2024T12:01:11 - [TEST_STEP][PASSED] - responseBody = response.getResponseText(): null
+
+25-03-2024T12:01:11 - [TEST_STEP][PASSED] - print(responseBody): null
+
+25-03-2024T12:01:11 - [TEST_STEP][PASSED] - jsonSlurper = new groovy.json.JsonSlurper(): null
+
+25-03-2024T12:01:11 - [TEST_STEP][PASSED] - jsonResponse = jsonSlurper.parseText(responseBody): null
+
+25-03-2024T12:01:11 - [TEST_STEP][PASSED] - token_Hasar = accessToken: null
+
+25-03-2024T12:01:11 - [TEST_STEP][PASSED] - println("Response Body: " + responseBody): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[25-03-2024T12:01:07 - [TEST_SUITE][PASSED] - Hasar: Test Cases/Hasar Flow/auth_token_Admin]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

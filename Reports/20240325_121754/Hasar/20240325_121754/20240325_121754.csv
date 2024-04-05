@@ -1,0 +1,36 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Hasar,,,,25-03-2024 12:18:00,25-03-2024 12:18:06,6.239s,ERROR
+,,,,,,,
+Test Cases/Hasar Flow/auth_token_Admin,,,,25-03-2024 12:18:00,25-03-2024 12:18:05,4.475s,PASSED
+"current_user = ""Hasar""",,,,25-03-2024 12:18:01,25-03-2024 12:18:01,0.366s,PASSED
+"response = sendRequest(findTestObject(""Flow Admin/token"", [""url_base"":url_base, ""api_key"":api_key_hasar]))",,,,25-03-2024 12:18:01,25-03-2024 12:18:05,3.374s,PASSED
+responseBody = response.getResponseText(),,,,25-03-2024 12:18:05,25-03-2024 12:18:05,0.014s,PASSED
+print(responseBody),,,,25-03-2024 12:18:05,25-03-2024 12:18:05,0.005s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,25-03-2024 12:18:05,25-03-2024 12:18:05,0.013s,PASSED
+jsonResponse = jsonSlurper.parseText(responseBody),,,,25-03-2024 12:18:05,25-03-2024 12:18:05,0.013s,PASSED
+token = accessToken,,,,25-03-2024 12:18:05,25-03-2024 12:18:05,0.012s,PASSED
+"println(""Response Body: "" + responseBody)",,,,25-03-2024 12:18:05,25-03-2024 12:18:05,0.006s,PASSED
+,,,,,,,
+Test Cases/Hasar Flow/Create Customer,,,,25-03-2024 12:18:05,25-03-2024 12:18:06,1.557s,ERROR
+uniqueId = randomUUID().toString(),,,,25-03-2024 12:18:05,25-03-2024 12:18:05,0.012s,PASSED
+"uniqueIdSubstring = replaceAll(""[^a-zA-Z0-9]"", """").substring(0, 10)",,,,25-03-2024 12:18:05,25-03-2024 12:18:05,0.014s,PASSED
+println(uniqueIdSubstring: $uniqueIdSubstring),,,,25-03-2024 12:18:05,25-03-2024 12:18:05,0.050s,PASSED
+println(uniqueId: $uniqueId),,,,25-03-2024 12:18:05,25-03-2024 12:18:05,0.001s,PASSED
+"requestBody = 
+{
+  ""name"": ""QATest"",
+  ""email"": ""QATest$uniqueIdSubstring@gmail.com"",
+  ""address"": ""QATest"",
+  ""phone"": ""1148784215"",
+  ""company"": ""QATest"",
+  ""external_reference"": ""QATest"",
+  ""description"": ""QATest"",
+  ""manager"": ""QATest"",
+  ""wallet"": {
+      ""address"": ""0x71C7656EC7ab88b098defB751B7401B5f6d8976F"",
+      ""network"": ""Ethereum"",
+      ""coin"": ""ETH""
+  }
+}
+",,,,25-03-2024 12:18:05,25-03-2024 12:18:05,0.002s,PASSED
+try,,,,25-03-2024 12:18:05,25-03-2024 12:18:06,1.120s,FAILED

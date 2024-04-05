@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description></description>
+   <name>Hasar</name>
+   <tag></tag>
+   <defaultProfile>false</defaultProfile>
+   <GlobalVariableEntity>
+      <description>Api de test</description>
+      <initValue>'https://test.depayapp.com'</initValue>
+      <name>url_base</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Tipo Admin</description>
+      <initValue>'DEPAY-6b262934b78d849dc9cfd114c4c440295d1ec1b5463cb972432b5dde1ef4494f'</initValue>
+      <name>api_key</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Distentivo para testear user</description>
+      <initValue>'Hasar'</initValue>
+      <name>current_user</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Bearer_token</description>
+      <initValue>'eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluaXN0cmFkb3IiLCJzdWIiOjI0LCJyb2xlIjoic3VwZXJfYWRtaW4iLCJ1dWlkIjoiM2I5ZjJiNTQtZTQzYS00MTBmLTkzZGMtYzQxY2MwYTI5MzhiIiwiY3VzdG9tZXJfdXVpZCI6bnVsbCwiY2xpZW50X3V1aWQiOm51bGwsImlhdCI6MTcxMTAzMTMyNywiZXhwIjoxNzExMTE3NzI3fQ.iE5OjZ5f_uE86JmGNKmq3Bsa6fLBfgJnRXa4XFrrOy-OYuvH7wtjcB2iBUdaK4G2'</initValue>
+      <name>token</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>

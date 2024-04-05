@@ -1,0 +1,14 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Test Auth,,,,20-03-2024 15:59:27,20-03-2024 15:59:32,4.823s,PASSED
+,,,,,,,
+Test Cases/Flow/Auth/auth_token_Admin,,,,20-03-2024 15:59:27,20-03-2024 15:59:31,3.463s,PASSED
+"current_user = ""Hasar""",,,,20-03-2024 15:59:28,20-03-2024 15:59:28,0.237s,PASSED
+"response = sendRequest(findTestObject(""Flow Admin/token"", [""url_base"":url_base, ""api_key"":api_key]))",,,,20-03-2024 15:59:28,20-03-2024 15:59:31,2.859s,PASSED
+responseBody = response.getResponseText(),,,,20-03-2024 15:59:31,20-03-2024 15:59:31,0.019s,PASSED
+"println(""Response Body: "" + responseBody)",,,,20-03-2024 15:59:31,20-03-2024 15:59:31,0.009s,PASSED
+,,,,,,,
+Test Cases/Flow/Auth/auth_token_Depay,,,,20-03-2024 15:59:31,20-03-2024 15:59:32,1.132s,PASSED
+"current_user = ""Depay""",,,,20-03-2024 15:59:31,20-03-2024 15:59:31,0.001s,PASSED
+"response = sendRequest(findTestObject(""Flow Admin/token"", [""url_base"":url_base, ""api_key"":api_key]))",,,,20-03-2024 15:59:31,20-03-2024 15:59:32,0.928s,PASSED
+responseBody = response.getResponseText(),,,,20-03-2024 15:59:32,20-03-2024 15:59:32,0.002s,PASSED
+"println(""Response Body: "" + responseBody)",,,,20-03-2024 15:59:32,20-03-2024 15:59:32,0.002s,PASSED

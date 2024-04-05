@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Ecommerce test" time="8.825" tests="6" failures="0" errors="1">
+   <testsuite name="Ecommerce test" tests="6" failures="0" errors="1" time="8.825" skipped="0" timestamp="04-04-2024T15:00:04" hostname="nicol - nicopc" id="Test Suites/Ecommerce test">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\Users\\nicol\\Katalon Studio\\Proyectos\\Depay\\Reports\\20240404_145958\\Ecommerce test\\20240404_145958"/>
+         <property name="logFiles" value="C:\\Users\\nicol\\Katalon Studio\\Proyectos\\Depay\\Reports\\20240404_145958\\Ecommerce test\\20240404_145958\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="nicol - nicopc"/>
+         <property name="hostAddress" value="192.168.100.4"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="9.3.2.212"/>
+      </properties>
+      <testcase name="Test Cases/Flow Ecommerce/1 auth_token_Admin" time="3.772" classname="Test Cases/Flow Ecommerce/1 auth_token_Admin" status="PASSED">
+         <system-out><![CDATA[04-04-2024T15:00:04 - [TEST_CASE][PASSED] - Test Cases/Flow Ecommerce/1 auth_token_Admin: Test Cases/Flow Ecommerce/1 auth_token_Admin
+
+04-04-2024T15:00:05 - [TEST_STEP][PASSED] - current_user = "Hasar": null
+
+04-04-2024T15:00:05 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Flow Admin/token", ["url_base":url_base, "api_key":api_key])): Send request successfully
+
+04-04-2024T15:00:08 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240404_145958\Ecommerce test\20240404_145958\requests\main\0.har
+
+04-04-2024T15:00:08 - [MESSAGE][PASSED] - Send request successfully
+
+04-04-2024T15:00:08 - [TEST_STEP][PASSED] - responseBody = response.getResponseText(): null
+
+04-04-2024T15:00:08 - [TEST_STEP][PASSED] - print(responseBody): null
+
+04-04-2024T15:00:08 - [TEST_STEP][PASSED] - jsonSlurper = new groovy.json.JsonSlurper(): null
+
+04-04-2024T15:00:08 - [TEST_STEP][PASSED] - jsonResponse = jsonSlurper.parseText(responseBody): null
+
+04-04-2024T15:00:08 - [TEST_STEP][PASSED] - token = accessToken: null
+
+04-04-2024T15:00:08 - [TEST_STEP][PASSED] - println("Response Body: " + responseBody): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Flow Ecommerce/2 Client create" time="1.299" classname="Test Cases/Flow Ecommerce/2 Client create" status="PASSED">
+         <system-out><![CDATA[04-04-2024T15:00:08 - [TEST_CASE][PASSED] - Test Cases/Flow Ecommerce/2 Client create: Test Cases/Flow Ecommerce/2 Client create
+
+04-04-2024T15:00:09 - [TEST_STEP][PASSED] - uniqueId = randomUUID().toString(): null
+
+04-04-2024T15:00:09 - [TEST_STEP][PASSED] - uniqueIdSubstring = replaceAll("[^a-zA-Z0-9]", "").substring(0, 10): null
+
+04-04-2024T15:00:09 - [TEST_STEP][PASSED] - println(uniqueIdSubstring: $uniqueIdSubstring): null
+
+04-04-2024T15:00:09 - [TEST_STEP][PASSED] - println(uniqueId: $uniqueId): null
+
+04-04-2024T15:00:09 - [TEST_STEP][PASSED] - requestBody = 
+{
+  "name": "QATest",
+  "email": "QATest$uniqueIdSubstring@gmail.com",
+  "phone": "22222",
+  "company": "Depay",
+  "external_reference": "Depay"
+}
+: null
+
+04-04-2024T15:00:09 - [TEST_STEP][PASSED] - try: null
+
+04-04-2024T15:00:09 - [TEST_STEP][PASSED] - urlBase = url_base + "/client/create": null
+
+04-04-2024T15:00:09 - [TEST_STEP][PASSED] - request = withRestRequestMethod("POST").build(): null
+
+04-04-2024T15:00:09 - [TEST_STEP][PASSED] - println(Request URL: $request.getRestUrl()): null
+
+04-04-2024T15:00:09 - [TEST_STEP][PASSED] - println(Request Body: $request.getBodyContent()): null
+
+04-04-2024T15:00:09 - [TEST_STEP][PASSED] - response = sendRequest(request, CONTINUE_ON_FAILURE): Send request successfully
+
+04-04-2024T15:00:09 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240404_145958\Ecommerce test\20240404_145958\requests\main\1.har
+
+04-04-2024T15:00:09 - [MESSAGE][PASSED] - Send request successfully
+
+04-04-2024T15:00:09 - [TEST_STEP][PASSED] - println(Response: $response.getResponseText()): null
+
+04-04-2024T15:00:09 - [TEST_STEP][PASSED] - if (response): null
+
+04-04-2024T15:00:09 - [TEST_STEP][PASSED] - println("Petición enviada con éxito."): null
+
+04-04-2024T15:00:09 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+04-04-2024T15:00:09 - [TEST_STEP][PASSED] - print(jsonResponse): null
+
+04-04-2024T15:00:09 - [TEST_STEP][PASSED] - client_uuid = uuid: null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Flow Ecommerce/3 Create Customer" time="1.168" classname="Test Cases/Flow Ecommerce/3 Create Customer" status="PASSED">
+         <system-out><![CDATA[04-04-2024T15:00:10 - [TEST_CASE][PASSED] - Test Cases/Flow Ecommerce/3 Create Customer: Test Cases/Flow Ecommerce/3 Create Customer
+
+04-04-2024T15:00:10 - [TEST_STEP][PASSED] - uniqueId = randomUUID().toString(): null
+
+04-04-2024T15:00:10 - [TEST_STEP][PASSED] - uniqueIdSubstring = replaceAll("[^a-zA-Z0-9]", "").substring(0, 10): null
+
+04-04-2024T15:00:10 - [TEST_STEP][PASSED] - println(uniqueIdSubstring: $uniqueIdSubstring): null
+
+04-04-2024T15:00:10 - [TEST_STEP][PASSED] - println(uniqueId: $uniqueId): null
+
+04-04-2024T15:00:10 - [TEST_STEP][PASSED] - requestBody = 
+{
+  "name": "QATest",
+  "email": "QATest$uniqueIdSubstring@gmail.com",
+  "address": "QATest",
+  "phone": "1148784215",
+  "company": "QATest",
+  "external_reference": "QATest",
+  "description": "QATest",
+  "manager": "QATest",
+  "wallet": {
+      "address": "0x71C7656EC7ab88b098defB751B7401B5f6d8976F",
+      "network": "Ethereum",
+      "coin": "ETH"
+  }
+}
+: null
+
+04-04-2024T15:00:10 - [TEST_STEP][PASSED] - try: null
+
+04-04-2024T15:00:10 - [TEST_STEP][PASSED] - client_uuid = client_uuid: null
+
+04-04-2024T15:00:10 - [TEST_STEP][PASSED] - urlBase = url_base + "/customer?client_uuid=" + client_uuid: null
+
+04-04-2024T15:00:10 - [TEST_STEP][PASSED] - request = withRestRequestMethod("POST").build(): null
+
+04-04-2024T15:00:10 - [TEST_STEP][PASSED] - println(Request URL: $request.getRestUrl()): null
+
+04-04-2024T15:00:10 - [TEST_STEP][PASSED] - println(Request Body: $request.getBodyContent()): null
+
+04-04-2024T15:00:10 - [TEST_STEP][PASSED] - response = sendRequest(request, CONTINUE_ON_FAILURE): Send request successfully
+
+04-04-2024T15:00:11 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240404_145958\Ecommerce test\20240404_145958\requests\main\2.har
+
+04-04-2024T15:00:11 - [MESSAGE][PASSED] - Send request successfully
+
+04-04-2024T15:00:11 - [TEST_STEP][PASSED] - println(Response: $response.getResponseText()): null
+
+04-04-2024T15:00:11 - [TEST_STEP][PASSED] - if (response): null
+
+04-04-2024T15:00:11 - [TEST_STEP][PASSED] - println("Petición enviada con éxito."): null
+
+04-04-2024T15:00:11 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+04-04-2024T15:00:11 - [TEST_STEP][PASSED] - print(jsonResponse): null
+
+04-04-2024T15:00:11 - [TEST_STEP][PASSED] - customer_uuid = uuid: null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Flow Ecommerce/4 Create User tipo Admin" time="1.175" classname="Test Cases/Flow Ecommerce/4 Create User tipo Admin" status="PASSED">
+         <system-out><![CDATA[04-04-2024T15:00:11 - [TEST_CASE][PASSED] - Test Cases/Flow Ecommerce/4 Create User tipo Admin: Test Cases/Flow Ecommerce/4 Create User tipo Admin
+
+04-04-2024T15:00:11 - [TEST_STEP][PASSED] - uniqueId = randomUUID().toString(): null
+
+04-04-2024T15:00:11 - [TEST_STEP][PASSED] - uniqueIdSubstring = replaceAll("[^a-zA-Z0-9]", "").substring(0, 10): null
+
+04-04-2024T15:00:11 - [TEST_STEP][PASSED] - println(uniqueIdSubstring: $uniqueIdSubstring): null
+
+04-04-2024T15:00:11 - [TEST_STEP][PASSED] - println(uniqueId: $uniqueId): null
+
+04-04-2024T15:00:11 - [TEST_STEP][PASSED] - requestBody = 
+{
+    "user": {
+		"username": "QATest$uniqueIdSubstring",
+        "password": "1234",
+        "role": "admin"
+    }
+}
+: null
+
+04-04-2024T15:00:11 - [TEST_STEP][PASSED] - try: null
+
+04-04-2024T15:00:11 - [TEST_STEP][PASSED] - clientUUID = client_uuid: null
+
+04-04-2024T15:00:11 - [TEST_STEP][PASSED] - urlBase = url_base + "/user/create?client_uuid=" + clientUUID: null
+
+04-04-2024T15:00:11 - [TEST_STEP][PASSED] - request = withRestRequestMethod("POST").build(): null
+
+04-04-2024T15:00:11 - [TEST_STEP][PASSED] - println(Request URL: $request.getRestUrl()): null
+
+04-04-2024T15:00:11 - [TEST_STEP][PASSED] - println(Request Body: $request.getBodyContent()): null
+
+04-04-2024T15:00:11 - [TEST_STEP][PASSED] - response = sendRequest(request, CONTINUE_ON_FAILURE): Send request successfully
+
+04-04-2024T15:00:12 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240404_145958\Ecommerce test\20240404_145958\requests\main\3.har
+
+04-04-2024T15:00:12 - [MESSAGE][PASSED] - Send request successfully
+
+04-04-2024T15:00:12 - [TEST_STEP][PASSED] - println(Response: $response.getResponseText()): null
+
+04-04-2024T15:00:12 - [TEST_STEP][PASSED] - if (response): null
+
+04-04-2024T15:00:12 - [TEST_STEP][PASSED] - println("Petición enviada con éxito."): null
+
+04-04-2024T15:00:12 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+04-04-2024T15:00:12 - [TEST_STEP][PASSED] - print(jsonResponse): null
+
+04-04-2024T15:00:12 - [TEST_STEP][PASSED] - api_key_ecommerce = apiKey: null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Flow Ecommerce/5 auth_token_Admin" time="1.085" classname="Test Cases/Flow Ecommerce/5 auth_token_Admin" status="PASSED">
+         <system-out><![CDATA[04-04-2024T15:00:12 - [TEST_CASE][PASSED] - Test Cases/Flow Ecommerce/5 auth_token_Admin: Test Cases/Flow Ecommerce/5 auth_token_Admin
+
+04-04-2024T15:00:12 - [TEST_STEP][PASSED] - current_user = "Hasar": null
+
+04-04-2024T15:00:12 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Flow Admin/token", ["url_base":url_base, "api_key":api_key_user])): Send request successfully
+
+04-04-2024T15:00:13 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240404_145958\Ecommerce test\20240404_145958\requests\main\4.har
+
+04-04-2024T15:00:13 - [MESSAGE][PASSED] - Send request successfully
+
+04-04-2024T15:00:13 - [TEST_STEP][PASSED] - responseBody = response.getResponseText(): null
+
+04-04-2024T15:00:13 - [TEST_STEP][PASSED] - print(responseBody): null
+
+04-04-2024T15:00:13 - [TEST_STEP][PASSED] - jsonSlurper = new groovy.json.JsonSlurper(): null
+
+04-04-2024T15:00:13 - [TEST_STEP][PASSED] - jsonResponse = jsonSlurper.parseText(responseBody): null
+
+04-04-2024T15:00:13 - [TEST_STEP][PASSED] - token = accessToken: null
+
+04-04-2024T15:00:13 - [TEST_STEP][PASSED] - println("Response Body: " + responseBody): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Flow Ecommerce/6 CreateOrder Ecommerce" time="0.103" classname="Test Cases/Flow Ecommerce/6 CreateOrder Ecommerce" status="ERROR">
+         <error type="ERROR" message="Test Cases/Flow Ecommerce/6 CreateOrder Ecommerce FAILED.&#xa;Reason:&#xa;groovy.lang.MissingPropertyException: No such property: url_local for class: internal.GlobalVariable&#xa;	at 6 CreateOrder Ecommerce.run(6 CreateOrder Ecommerce:20)&#xa;	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)&#xa;	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)&#xa;	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:148)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)&#xa;	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)&#xa;	at TempTestSuite1712253598378.run(TempTestSuite1712253598378.groovy:35)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#xa;	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xa;"/>
+         <system-out><![CDATA[04-04-2024T15:00:13 - [TEST_CASE][ERROR] - Test Cases/Flow Ecommerce/6 CreateOrder Ecommerce: Test Cases/Flow Ecommerce/6 CreateOrder Ecommerce FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: url_local for class: internal.GlobalVariable
+	at 6 CreateOrder Ecommerce.run(6 CreateOrder Ecommerce:20)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:148)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)
+	at TempTestSuite1712253598378.run(TempTestSuite1712253598378.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+04-04-2024T15:00:13 - [TEST_STEP][ERROR] - sendRequest(findTestObject("Flow Admin/7.1) Order - Crear una con sus items (ECOMMERCE)", ["url_local":url_local])): Test Cases/Flow Ecommerce/6 CreateOrder Ecommerce FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: url_local for class: internal.GlobalVariable
+	at 6 CreateOrder Ecommerce.run(6 CreateOrder Ecommerce:20)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:148)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)
+	at TempTestSuite1712253598378.run(TempTestSuite1712253598378.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+04-04-2024T15:00:13 - [MESSAGE][ERROR] - Test Cases/Flow Ecommerce/6 CreateOrder Ecommerce FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: url_local for class: internal.GlobalVariable
+	at 6 CreateOrder Ecommerce.run(6 CreateOrder Ecommerce:20)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:148)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)
+	at TempTestSuite1712253598378.run(TempTestSuite1712253598378.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-out>
+         <system-err><![CDATA[04-04-2024T15:00:13 - [TEST_CASE][ERROR] - Test Cases/Flow Ecommerce/6 CreateOrder Ecommerce: Test Cases/Flow Ecommerce/6 CreateOrder Ecommerce FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: url_local for class: internal.GlobalVariable
+	at 6 CreateOrder Ecommerce.run(6 CreateOrder Ecommerce:20)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:148)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)
+	at TempTestSuite1712253598378.run(TempTestSuite1712253598378.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-err>
+      </testcase>
+      <system-out><![CDATA[04-04-2024T15:00:04 - [TEST_SUITE][ERROR] - Ecommerce test: Test Cases/Flow Ecommerce/6 CreateOrder Ecommerce FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: url_local for class: internal.GlobalVariable
+	at 6 CreateOrder Ecommerce.run(6 CreateOrder Ecommerce:20)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:148)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)
+	at TempTestSuite1712253598378.run(TempTestSuite1712253598378.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-out>
+      <system-err><![CDATA[04-04-2024T15:00:04 - [TEST_SUITE][ERROR] - Ecommerce test: Test Cases/Flow Ecommerce/6 CreateOrder Ecommerce FAILED.
+Reason:
+groovy.lang.MissingPropertyException: No such property: url_local for class: internal.GlobalVariable
+	at 6 CreateOrder Ecommerce.run(6 CreateOrder Ecommerce:20)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:148)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)
+	at TempTestSuite1712253598378.run(TempTestSuite1712253598378.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-err>
+   </testsuite>
+</testsuites>

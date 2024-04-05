@@ -1,0 +1,12 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Hasar,,,,25-03-2024 11:58:33,25-03-2024 11:58:37,4.086s,PASSED
+,,,,,,,
+Test Cases/Hasar Flow/auth_token_Admin,,,,25-03-2024 11:58:33,25-03-2024 11:58:37,3.883s,PASSED
+"current_user = ""Hasar""",,,,25-03-2024 11:58:34,25-03-2024 11:58:34,0.271s,PASSED
+"response = sendRequest(findTestObject(""Flow Admin/token"", [""url_base"":url_base, ""api_key"":api_key_hasar]))",,,,25-03-2024 11:58:34,25-03-2024 11:58:37,3.127s,PASSED
+responseBody = response.getResponseText(),,,,25-03-2024 11:58:37,25-03-2024 11:58:37,0.018s,PASSED
+print(responseBody),,,,25-03-2024 11:58:37,25-03-2024 11:58:37,0.006s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,25-03-2024 11:58:37,25-03-2024 11:58:37,0.015s,PASSED
+jsonResponse = jsonSlurper.parseText(responseBody),,,,25-03-2024 11:58:37,25-03-2024 11:58:37,0.039s,PASSED
+token_Hasar = accessToken,,,,25-03-2024 11:58:37,25-03-2024 11:58:37,0.020s,PASSED
+"println(""Response Body: "" + responseBody)",,,,25-03-2024 11:58:37,25-03-2024 11:58:37,0.005s,PASSED

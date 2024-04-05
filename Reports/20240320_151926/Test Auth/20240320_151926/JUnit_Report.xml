@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Test Auth" time="5.795" tests="2" failures="0" errors="0">
+   <testsuite name="Test Auth" tests="2" failures="0" errors="0" time="5.795" skipped="0" timestamp="20-03-2024T15:19:32" hostname="nicol - nicopc" id="Test Suites/Test Auth">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\Users\\nicol\\Katalon Studio\\Proyectos\\Depay\\Reports\\20240320_151926\\Test Auth\\20240320_151926"/>
+         <property name="logFiles" value="C:\\Users\\nicol\\Katalon Studio\\Proyectos\\Depay\\Reports\\20240320_151926\\Test Auth\\20240320_151926\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="nicol - nicopc"/>
+         <property name="hostAddress" value="192.168.100.4"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="9.3.2.212"/>
+      </properties>
+      <testcase name="Test Cases/Flow/Auth/auth_token_error" time="3.46" classname="Test Cases/Flow/Auth/auth_token_error" status="PASSED">
+         <system-out><![CDATA[20-03-2024T15:19:32 - [TEST_CASE][PASSED] - Test Cases/Flow/Auth/auth_token_error: Test Cases/Flow/Auth/auth_token_error
+
+20-03-2024T15:19:32 - [TEST_STEP][PASSED] - sendRequest(findTestObject("Flow/token", ["url_base":url_base, "api_key":api_key])): Send request successfully
+
+20-03-2024T15:19:35 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240320_151926\Test Auth\20240320_151926\requests\main\0.har
+
+20-03-2024T15:19:35 - [MESSAGE][PASSED] - Send request successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Flow/Auth/auth_token_Success" time="2.11" classname="Test Cases/Flow/Auth/auth_token_Success" status="PASSED">
+         <system-out><![CDATA[20-03-2024T15:19:35 - [TEST_CASE][PASSED] - Test Cases/Flow/Auth/auth_token_Success: Test Cases/Flow/Auth/auth_token_Success
+
+20-03-2024T15:19:36 - [TEST_STEP][PASSED] - sendRequest(findTestObject("Flow/token", ["url_base":url_base, "api_key":api_key])): Send request successfully
+
+20-03-2024T15:19:37 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240320_151926\Test Auth\20240320_151926\requests\main\1.har
+
+20-03-2024T15:19:37 - [MESSAGE][PASSED] - Send request successfully
+
+20-03-2024T15:19:37 - [TEST_STEP][PASSED] - sendRequest(findTestObject("Flow/token", ["url_base":url_base, "api_key":api_key])): Send request successfully
+
+20-03-2024T15:19:37 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240320_151926\Test Auth\20240320_151926\requests\main\2.har
+
+20-03-2024T15:19:37 - [MESSAGE][PASSED] - Send request successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[20-03-2024T15:19:32 - [TEST_SUITE][PASSED] - Test Auth: Test Cases/Flow/Auth/auth_token_Success]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

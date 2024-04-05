@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Hasar" time="10.417" tests="5" failures="0" errors="0">
+   <testsuite name="Hasar" tests="5" failures="0" errors="0" time="10.417" skipped="0" timestamp="29-03-2024T17:28:18" hostname="nicol - 192.168.0.180" id="Test Suites/Hasar">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\Users\\nicol\\Katalon Studio\\Proyectos\\Depay\\Reports\\20240329_172811\\Hasar\\20240329_172811"/>
+         <property name="logFiles" value="C:\\Users\\nicol\\Katalon Studio\\Proyectos\\Depay\\Reports\\20240329_172811\\Hasar\\20240329_172811\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="nicol - 192.168.0.180"/>
+         <property name="hostAddress" value="192.168.0.180"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="9.3.2.212"/>
+      </properties>
+      <testcase name="Test Cases/Hasar Flow/1 auth_token_Admin" time="4.636" classname="Test Cases/Hasar Flow/1 auth_token_Admin" status="PASSED">
+         <system-out><![CDATA[29-03-2024T17:28:18 - [TEST_CASE][PASSED] - Test Cases/Hasar Flow/1 auth_token_Admin: Test Cases/Hasar Flow/1 auth_token_Admin
+
+29-03-2024T17:28:19 - [TEST_STEP][PASSED] - current_user = "Hasar": null
+
+29-03-2024T17:28:19 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Flow Admin/token", ["url_base":url_base, "api_key":api_key_hasar])): Send request successfully
+
+29-03-2024T17:28:23 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240329_172811\Hasar\20240329_172811\requests\main\0.har
+
+29-03-2024T17:28:23 - [MESSAGE][PASSED] - Send request successfully
+
+29-03-2024T17:28:23 - [TEST_STEP][PASSED] - responseBody = response.getResponseText(): null
+
+29-03-2024T17:28:23 - [TEST_STEP][PASSED] - print(responseBody): null
+
+29-03-2024T17:28:23 - [TEST_STEP][PASSED] - jsonSlurper = new groovy.json.JsonSlurper(): null
+
+29-03-2024T17:28:23 - [TEST_STEP][PASSED] - jsonResponse = jsonSlurper.parseText(responseBody): null
+
+29-03-2024T17:28:23 - [TEST_STEP][PASSED] - token = accessToken: null
+
+29-03-2024T17:28:23 - [TEST_STEP][PASSED] - println("Response Body: " + responseBody): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Hasar Flow/2 Create Customer" time="1.564" classname="Test Cases/Hasar Flow/2 Create Customer" status="PASSED">
+         <system-out><![CDATA[29-03-2024T17:28:23 - [TEST_CASE][PASSED] - Test Cases/Hasar Flow/2 Create Customer: Test Cases/Hasar Flow/2 Create Customer
+
+29-03-2024T17:28:24 - [TEST_STEP][PASSED] - uniqueId = randomUUID().toString(): null
+
+29-03-2024T17:28:24 - [TEST_STEP][PASSED] - uniqueIdSubstring = replaceAll("[^a-zA-Z0-9]", "").substring(0, 10): null
+
+29-03-2024T17:28:24 - [TEST_STEP][PASSED] - println(uniqueIdSubstring: $uniqueIdSubstring): null
+
+29-03-2024T17:28:24 - [TEST_STEP][PASSED] - println(uniqueId: $uniqueId): null
+
+29-03-2024T17:28:24 - [TEST_STEP][PASSED] - requestBody = 
+{
+  "name": "QATest",
+  "email": "QATest$uniqueIdSubstring@gmail.com",
+  "address": "QATest",
+  "phone": "1148784215",
+  "company": "QATest",
+  "external_reference": "QATest",
+  "description": "QATest",
+  "manager": "QATest",
+  "wallet": {
+      "address": "0x71C7656EC7ab88b098defB751B7401B5f6d8976F",
+      "network": "Ethereum",
+      "coin": "ETH"
+  }
+}
+: null
+
+29-03-2024T17:28:24 - [TEST_STEP][PASSED] - try: null
+
+29-03-2024T17:28:24 - [TEST_STEP][PASSED] - urlBase = url_base + "/customer": null
+
+29-03-2024T17:28:24 - [TEST_STEP][PASSED] - request = withRestRequestMethod("POST").build(): null
+
+29-03-2024T17:28:24 - [TEST_STEP][PASSED] - println(Request URL: $request.getRestUrl()): null
+
+29-03-2024T17:28:24 - [TEST_STEP][PASSED] - println(Request Body: $request.getBodyContent()): null
+
+29-03-2024T17:28:24 - [TEST_STEP][PASSED] - response = sendRequest(request, CONTINUE_ON_FAILURE): Send request successfully
+
+29-03-2024T17:28:25 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240329_172811\Hasar\20240329_172811\requests\main\1.har
+
+29-03-2024T17:28:25 - [MESSAGE][PASSED] - Send request successfully
+
+29-03-2024T17:28:25 - [TEST_STEP][PASSED] - println(Response: $response.getResponseText()): null
+
+29-03-2024T17:28:25 - [TEST_STEP][PASSED] - if (response): null
+
+29-03-2024T17:28:25 - [TEST_STEP][PASSED] - println("Petición enviada con éxito."): null
+
+29-03-2024T17:28:25 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+29-03-2024T17:28:25 - [TEST_STEP][PASSED] - customer_uuid = uuid: null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Hasar Flow/3 Create User tipo User" time="1.445" classname="Test Cases/Hasar Flow/3 Create User tipo User" status="PASSED">
+         <system-out><![CDATA[29-03-2024T17:28:25 - [TEST_CASE][PASSED] - Test Cases/Hasar Flow/3 Create User tipo User: Test Cases/Hasar Flow/3 Create User tipo User
+
+29-03-2024T17:28:25 - [TEST_STEP][PASSED] - uniqueId = randomUUID().toString(): null
+
+29-03-2024T17:28:25 - [TEST_STEP][PASSED] - uniqueIdSubstring = replaceAll("[^a-zA-Z0-9]", "").substring(0, 10): null
+
+29-03-2024T17:28:25 - [TEST_STEP][PASSED] - println(uniqueIdSubstring: $uniqueIdSubstring): null
+
+29-03-2024T17:28:25 - [TEST_STEP][PASSED] - println(uniqueId: $uniqueId): null
+
+29-03-2024T17:28:25 - [TEST_STEP][PASSED] - requestBody = 
+{
+    "user": {
+		"username": "QATest$uniqueIdSubstring",
+        "password": "1234",
+        "role": "user"
+    }
+}
+: null
+
+29-03-2024T17:28:25 - [TEST_STEP][PASSED] - try: null
+
+29-03-2024T17:28:25 - [TEST_STEP][PASSED] - customerUuid = customer_uuid: null
+
+29-03-2024T17:28:25 - [TEST_STEP][PASSED] - urlBase = url_base + "/user/create?collectorId=" + customerUuid: null
+
+29-03-2024T17:28:25 - [TEST_STEP][PASSED] - request = withRestRequestMethod("POST").build(): null
+
+29-03-2024T17:28:25 - [TEST_STEP][PASSED] - println(Request URL: $request.getRestUrl()): null
+
+29-03-2024T17:28:25 - [TEST_STEP][PASSED] - println(Request Body: $request.getBodyContent()): null
+
+29-03-2024T17:28:25 - [TEST_STEP][PASSED] - response = sendRequest(request, CONTINUE_ON_FAILURE): Send request successfully
+
+29-03-2024T17:28:26 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240329_172811\Hasar\20240329_172811\requests\main\2.har
+
+29-03-2024T17:28:26 - [MESSAGE][PASSED] - Send request successfully
+
+29-03-2024T17:28:26 - [TEST_STEP][PASSED] - println(Response: $response.getResponseText()): null
+
+29-03-2024T17:28:26 - [TEST_STEP][PASSED] - if (response): null
+
+29-03-2024T17:28:26 - [TEST_STEP][PASSED] - println("Petición enviada con éxito."): null
+
+29-03-2024T17:28:26 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+29-03-2024T17:28:26 - [TEST_STEP][PASSED] - print(jsonResponse): null
+
+29-03-2024T17:28:26 - [TEST_STEP][PASSED] - api_key_user = apiKey: null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Hasar Flow/4 auth_token_User" time="1.128" classname="Test Cases/Hasar Flow/4 auth_token_User" status="PASSED">
+         <system-out><![CDATA[29-03-2024T17:28:26 - [TEST_CASE][PASSED] - Test Cases/Hasar Flow/4 auth_token_User: Test Cases/Hasar Flow/4 auth_token_User
+
+29-03-2024T17:28:26 - [TEST_STEP][PASSED] - current_user = "Hasar": null
+
+29-03-2024T17:28:26 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Flow Admin/token", ["url_base":url_base, "api_key":api_key_user])): Send request successfully
+
+29-03-2024T17:28:27 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240329_172811\Hasar\20240329_172811\requests\main\3.har
+
+29-03-2024T17:28:27 - [MESSAGE][PASSED] - Send request successfully
+
+29-03-2024T17:28:27 - [TEST_STEP][PASSED] - responseBody = response.getResponseText(): null
+
+29-03-2024T17:28:27 - [TEST_STEP][PASSED] - print(responseBody): null
+
+29-03-2024T17:28:27 - [TEST_STEP][PASSED] - jsonSlurper = new groovy.json.JsonSlurper(): null
+
+29-03-2024T17:28:27 - [TEST_STEP][PASSED] - jsonResponse = jsonSlurper.parseText(responseBody): null
+
+29-03-2024T17:28:27 - [TEST_STEP][PASSED] - token = accessToken: null
+
+29-03-2024T17:28:27 - [TEST_STEP][PASSED] - println("Response Body: " + responseBody): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Hasar Flow/5 AccessToken" time="1.109" classname="Test Cases/Hasar Flow/5 AccessToken" status="PASSED">
+         <system-out><![CDATA[29-03-2024T17:28:27 - [TEST_CASE][PASSED] - Test Cases/Hasar Flow/5 AccessToken: Test Cases/Hasar Flow/5 AccessToken
+
+29-03-2024T17:28:28 - [TEST_STEP][PASSED] - try: null
+
+29-03-2024T17:28:28 - [TEST_STEP][PASSED] - urlBase = url_base + "/auth/access_token": null
+
+29-03-2024T17:28:28 - [TEST_STEP][PASSED] - request = withRestRequestMethod("GET").build(): null
+
+29-03-2024T17:28:28 - [TEST_STEP][PASSED] - println(Request URL: $request.getRestUrl()): null
+
+29-03-2024T17:28:28 - [TEST_STEP][PASSED] - response = sendRequest(request, CONTINUE_ON_FAILURE): Send request successfully
+
+29-03-2024T17:28:28 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240329_172811\Hasar\20240329_172811\requests\main\4.har
+
+29-03-2024T17:28:28 - [MESSAGE][PASSED] - Send request successfully
+
+29-03-2024T17:28:28 - [TEST_STEP][PASSED] - println(Response: $response.getResponseText()): null
+
+29-03-2024T17:28:28 - [TEST_STEP][PASSED] - if (response): null
+
+29-03-2024T17:28:28 - [TEST_STEP][PASSED] - println("Petición enviada con éxito."): null
+
+29-03-2024T17:28:28 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+29-03-2024T17:28:28 - [TEST_STEP][PASSED] - print(jsonResponse): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[29-03-2024T17:28:18 - [TEST_SUITE][PASSED] - Hasar: Test Cases/Hasar Flow/5 AccessToken]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

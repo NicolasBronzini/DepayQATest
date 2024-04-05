@@ -1,0 +1,75 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Hasar,,,,25-03-2024 16:07:04,25-03-2024 16:07:14,9.617s,PASSED
+,,,,,,,
+Test Cases/Hasar Flow/1 auth_token_Admin,,,,25-03-2024 16:07:04,25-03-2024 16:07:08,3.600s,PASSED
+"current_user = ""Hasar""",,,,25-03-2024 16:07:05,25-03-2024 16:07:05,0.294s,PASSED
+"response = sendRequest(findTestObject(""Flow Admin/token"", [""url_base"":url_base, ""api_key"":api_key_hasar]))",,,,25-03-2024 16:07:05,25-03-2024 16:07:08,2.769s,PASSED
+responseBody = response.getResponseText(),,,,25-03-2024 16:07:08,25-03-2024 16:07:08,0.013s,PASSED
+print(responseBody),,,,25-03-2024 16:07:08,25-03-2024 16:07:08,0.018s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,25-03-2024 16:07:08,25-03-2024 16:07:08,0.036s,PASSED
+jsonResponse = jsonSlurper.parseText(responseBody),,,,25-03-2024 16:07:08,25-03-2024 16:07:08,0.028s,PASSED
+token = accessToken,,,,25-03-2024 16:07:08,25-03-2024 16:07:08,0.039s,PASSED
+"println(""Response Body: "" + responseBody)",,,,25-03-2024 16:07:08,25-03-2024 16:07:08,0.004s,PASSED
+,,,,,,,
+Test Cases/Hasar Flow/2 Create Customer,,,,25-03-2024 16:07:08,25-03-2024 16:07:10,1.484s,PASSED
+uniqueId = randomUUID().toString(),,,,25-03-2024 16:07:08,25-03-2024 16:07:09,0.008s,PASSED
+"uniqueIdSubstring = replaceAll(""[^a-zA-Z0-9]"", """").substring(0, 10)",,,,25-03-2024 16:07:09,25-03-2024 16:07:09,0.010s,PASSED
+println(uniqueIdSubstring: $uniqueIdSubstring),,,,25-03-2024 16:07:09,25-03-2024 16:07:09,0.058s,PASSED
+println(uniqueId: $uniqueId),,,,25-03-2024 16:07:09,25-03-2024 16:07:09,0.002s,PASSED
+"requestBody = 
+{
+  ""name"": ""QATest"",
+  ""email"": ""QATest$uniqueIdSubstring@gmail.com"",
+  ""address"": ""QATest"",
+  ""phone"": ""1148784215"",
+  ""company"": ""QATest"",
+  ""external_reference"": ""QATest"",
+  ""description"": ""QATest"",
+  ""manager"": ""QATest"",
+  ""wallet"": {
+      ""address"": ""0x71C7656EC7ab88b098defB751B7401B5f6d8976F"",
+      ""network"": ""Ethereum"",
+      ""coin"": ""ETH""
+  }
+}
+",,,,25-03-2024 16:07:09,25-03-2024 16:07:09,0.002s,PASSED
+try,,,,25-03-2024 16:07:09,25-03-2024 16:07:10,0.940s,PASSED
+,,,,,,,
+Test Cases/Hasar Flow/3 Create User tipo User,,,,25-03-2024 16:07:10,25-03-2024 16:07:11,1.221s,PASSED
+uniqueId = randomUUID().toString(),,,,25-03-2024 16:07:10,25-03-2024 16:07:10,0.007s,PASSED
+"uniqueIdSubstring = replaceAll(""[^a-zA-Z0-9]"", """").substring(0, 10)",,,,25-03-2024 16:07:10,25-03-2024 16:07:10,0.001s,PASSED
+println(uniqueIdSubstring: $uniqueIdSubstring),,,,25-03-2024 16:07:10,25-03-2024 16:07:10,0.002s,PASSED
+println(uniqueId: $uniqueId),,,,25-03-2024 16:07:10,25-03-2024 16:07:10,0.003s,PASSED
+"requestBody = 
+{
+    ""user"": {
+		""username"": ""QATest$uniqueIdSubstring"",
+        ""password"": ""1234"",
+        ""role"": ""user""
+    }
+}
+",,,,25-03-2024 16:07:10,25-03-2024 16:07:10,0.003s,PASSED
+try,,,,25-03-2024 16:07:10,25-03-2024 16:07:11,1.006s,PASSED
+,,,,,,,
+Test Cases/Hasar Flow/4 auth_token_User,,,,25-03-2024 16:07:11,25-03-2024 16:07:12,1.068s,PASSED
+"current_user = ""Hasar""",,,,25-03-2024 16:07:11,25-03-2024 16:07:11,0.001s,PASSED
+"response = sendRequest(findTestObject(""Flow Admin/token"", [""url_base"":url_base, ""api_key"":api_key_user]))",,,,25-03-2024 16:07:11,25-03-2024 16:07:12,0.931s,PASSED
+responseBody = response.getResponseText(),,,,25-03-2024 16:07:12,25-03-2024 16:07:12,0.001s,PASSED
+print(responseBody),,,,25-03-2024 16:07:12,25-03-2024 16:07:12,0.001s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,25-03-2024 16:07:12,25-03-2024 16:07:12,0.001s,PASSED
+jsonResponse = jsonSlurper.parseText(responseBody),,,,25-03-2024 16:07:12,25-03-2024 16:07:12,0.001s,PASSED
+token = accessToken,,,,25-03-2024 16:07:12,25-03-2024 16:07:12,0.001s,PASSED
+"println(""Response Body: "" + responseBody)",,,,25-03-2024 16:07:12,25-03-2024 16:07:12,0.001s,PASSED
+,,,,,,,
+Test Cases/Hasar Flow/5 AccessToken,,,,25-03-2024 16:07:12,25-03-2024 16:07:13,1.076s,PASSED
+try,,,,25-03-2024 16:07:12,25-03-2024 16:07:13,0.815s,PASSED
+,,,,,,,
+Test Cases/Hasar Flow/6 auth_token_Admin - Copy,,,,25-03-2024 16:07:13,25-03-2024 16:07:14,0.932s,PASSED
+"current_user = ""Hasar""",,,,25-03-2024 16:07:13,25-03-2024 16:07:13,0.001s,PASSED
+"response = sendRequest(findTestObject(""Flow Admin/token"", [""url_base"":url_base, ""api_key"":api_key_hasar]))",,,,25-03-2024 16:07:13,25-03-2024 16:07:14,0.913s,PASSED
+responseBody = response.getResponseText(),,,,25-03-2024 16:07:14,25-03-2024 16:07:14,0.001s,PASSED
+print(responseBody),,,,25-03-2024 16:07:14,25-03-2024 16:07:14,0.000s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,25-03-2024 16:07:14,25-03-2024 16:07:14,0.001s,PASSED
+jsonResponse = jsonSlurper.parseText(responseBody),,,,25-03-2024 16:07:14,25-03-2024 16:07:14,0.000s,PASSED
+token = accessToken,,,,25-03-2024 16:07:14,25-03-2024 16:07:14,0.001s,PASSED
+"println(""Response Body: "" + responseBody)",,,,25-03-2024 16:07:14,25-03-2024 16:07:14,0.001s,PASSED

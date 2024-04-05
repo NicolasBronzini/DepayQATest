@@ -1,0 +1,38 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Hasar,,,,25-03-2024 12:02:30,25-03-2024 12:02:36,5.316s,ERROR
+,,,,,,,
+Test Cases/Hasar Flow/auth_token_Admin,,,,25-03-2024 12:02:31,25-03-2024 12:02:34,3.563s,PASSED
+"current_user = ""Hasar""",,,,25-03-2024 12:02:31,25-03-2024 12:02:31,0.261s,PASSED
+"response = sendRequest(findTestObject(""Flow Admin/token"", [""url_base"":url_base, ""api_key"":api_key_hasar]))",,,,25-03-2024 12:02:31,25-03-2024 12:02:34,2.858s,PASSED
+responseBody = response.getResponseText(),,,,25-03-2024 12:02:34,25-03-2024 12:02:34,0.021s,PASSED
+print(responseBody),,,,25-03-2024 12:02:34,25-03-2024 12:02:34,0.006s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,25-03-2024 12:02:34,25-03-2024 12:02:34,0.014s,PASSED
+jsonResponse = jsonSlurper.parseText(responseBody),,,,25-03-2024 12:02:34,25-03-2024 12:02:34,0.015s,PASSED
+token_Hasar = accessToken,,,,25-03-2024 12:02:34,25-03-2024 12:02:34,0.024s,PASSED
+"println(""Response Body: "" + responseBody)",,,,25-03-2024 12:02:34,25-03-2024 12:02:34,0.006s,PASSED
+,,,,,,,
+Test Cases/Hasar Flow/Create Customer,,,,25-03-2024 12:02:34,25-03-2024 12:02:36,1.543s,ERROR
+uniqueId = randomUUID().toString(),,,,25-03-2024 12:02:35,25-03-2024 12:02:35,0.009s,PASSED
+token_Hasar,,,,25-03-2024 12:02:35,25-03-2024 12:02:35,0.003s,PASSED
+print(token_Hasar),,,,25-03-2024 12:02:35,25-03-2024 12:02:35,0.005s,PASSED
+"uniqueIdSubstring = replaceAll(""[^a-zA-Z0-9]"", """").substring(0, 10)",,,,25-03-2024 12:02:35,25-03-2024 12:02:35,0.009s,PASSED
+println(uniqueIdSubstring: $uniqueIdSubstring),,,,25-03-2024 12:02:35,25-03-2024 12:02:35,0.044s,PASSED
+println(uniqueId: $uniqueId),,,,25-03-2024 12:02:35,25-03-2024 12:02:35,0.003s,PASSED
+"requestBody = 
+{
+  ""name"": ""QATest"",
+  ""email"": ""QATest$uniqueIdSubstring@gmail.com"",
+  ""address"": ""QATest"",
+  ""phone"": ""1148784215"",
+  ""company"": ""QATest"",
+  ""external_reference"": ""QATest"",
+  ""description"": ""QATest"",
+  ""manager"": ""QATest"",
+  ""wallet"": {
+      ""address"": ""0x71C7656EC7ab88b098defB751B7401B5f6d8976F"",
+      ""network"": ""Ethereum"",
+      ""coin"": ""ETH""
+  }
+}
+",,,,25-03-2024 12:02:35,25-03-2024 12:02:35,0.003s,PASSED
+try,,,,25-03-2024 12:02:35,25-03-2024 12:02:36,1.149s,FAILED

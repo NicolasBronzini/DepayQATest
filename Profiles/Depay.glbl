@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description></description>
+   <name>Depay</name>
+   <tag></tag>
+   <defaultProfile>false</defaultProfile>
+   <GlobalVariableEntity>
+      <description>Url de la api de test</description>
+      <initValue>'https://test.depayapp.com'</initValue>
+      <name>url_base</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>User Super Admin</description>
+      <initValue>'DEPAY-6b262934b78d849dc9cfd114c4c440295d1ec1b5463cb972432b5dde1ef4494f'</initValue>
+      <name>api_key</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Depay'</initValue>
+      <name>current_user</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>

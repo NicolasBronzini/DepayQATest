@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description></description>
+   <name>default</name>
+   <tag></tag>
+   <defaultProfile>true</defaultProfile>
+   <GlobalVariableEntity>
+      <description>URL de test</description>
+      <initValue>'https://test.depayapp.com'</initValue>
+      <name>url_base</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>DEPAY SUPER</description>
+      <initValue>'DEPAY-6b262934b78d849dc9cfd114c4c440295d1ec1b5463cb972432b5dde1ef4494f'</initValue>
+      <name>api_key</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>HASAR</description>
+      <initValue>'DEPAY-5fd49cb4873c81a7ebf6e6109c11500b8c394ec42f2efe5d924987525e0324e0'</initValue>
+      <name>api_key_hasar</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluaXN0cmFkb3IiLCJzdWIiOjI0LCJyb2xlIjoic3VwZXJfYWRtaW4iLCJ1dWlkIjoiM2I5ZjJiNTQtZTQzYS00MTBmLTkzZGMtYzQxY2MwYTI5MzhiIiwiY3VzdG9tZXJfdXVpZCI6bnVsbCwiY2xpZW50X3V1aWQiOm51bGwsImlhdCI6MTcxMjI0MDIzOSwiZXhwIjoxNzEyMzI2NjM5fQ.ln3IrFIrqqORn9kiDhiq3I06_8rCMfJy4KVn8bCm2crmmDkxVT-2ojlM1FfVqlfA'</initValue>
+      <name>token</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>uuid del customer</description>
+      <initValue>'3442b649-e2c8-4019-894e-05edb2607cb4'</initValue>
+      <name>customer_uuid</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Api_key del usuario creado</description>
+      <initValue>''</initValue>
+      <name>api_key_user</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Token del user tipo user</description>
+      <initValue>'DEPAY_TOKEN-518bb448c6e8f472297b80443d78d3f5803d05e77cc6ba4aef2da7aa95f38d12\r\n'</initValue>
+      <name>access_token</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>UUID cliente ecomercce</description>
+      <initValue>''</initValue>
+      <name>client_uuid</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>User tipo admin ecommerce</description>
+      <initValue>''</initValue>
+      <name>api_key_ecommerce</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>token_Admin</description>
+      <initValue>''</initValue>
+      <name>token_Admin</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>

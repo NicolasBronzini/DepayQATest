@@ -1,0 +1,8 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Test Auth,,,,20-03-2024 15:23:04,20-03-2024 15:23:10,5.944s,PASSED
+,,,,,,,
+Test Cases/Flow/Auth/auth_token_error,,,,20-03-2024 15:23:04,20-03-2024 15:23:09,4.673s,PASSED
+"sendRequest(findTestObject(""Flow/token"", [""url_base"":url_base, ""api_key"":api_key]))",,,,20-03-2024 15:23:05,20-03-2024 15:23:09,3.993s,PASSED
+,,,,,,,
+Test Cases/Flow/Auth/auth_token_Success,,,,20-03-2024 15:23:09,20-03-2024 15:23:10,0.983s,PASSED
+"sendRequest(findTestObject(""Flow/token"", [""url_base"":url_base, ""api_key"":api_key]))",,,,20-03-2024 15:23:09,20-03-2024 15:23:10,0.929s,PASSED

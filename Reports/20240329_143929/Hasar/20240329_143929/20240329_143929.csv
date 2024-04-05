@@ -1,0 +1,56 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Hasar,,,,29-03-2024 14:39:37,29-03-2024 14:39:43,5.762s,FAILED
+,,,,,,,
+Test Cases/Hasar Flow/1 auth_token_Admin,,,,29-03-2024 14:39:37,29-03-2024 14:39:40,2.901s,FAILED
+"current_user = ""Hasar""",,,,29-03-2024 14:39:37,29-03-2024 14:39:38,0.382s,PASSED
+"response = sendRequest(findTestObject(""Flow Admin/token"", [""url_base"":url_base, ""api_key"":api_key_hasar]))",,,,29-03-2024 14:39:38,29-03-2024 14:39:40,2.008s,FAILED
+,,,,,,,
+Test Cases/Hasar Flow/2 Create Customer,,,,29-03-2024 14:39:40,29-03-2024 14:39:41,1.032s,FAILED
+uniqueId = randomUUID().toString(),,,,29-03-2024 14:39:41,29-03-2024 14:39:41,0.016s,PASSED
+"uniqueIdSubstring = replaceAll(""[^a-zA-Z0-9]"", """").substring(0, 10)",,,,29-03-2024 14:39:41,29-03-2024 14:39:41,0.015s,PASSED
+println(uniqueIdSubstring: $uniqueIdSubstring),,,,29-03-2024 14:39:41,29-03-2024 14:39:41,0.049s,PASSED
+println(uniqueId: $uniqueId),,,,29-03-2024 14:39:41,29-03-2024 14:39:41,0.003s,PASSED
+"requestBody = 
+{
+  ""name"": ""QATest"",
+  ""email"": ""QATest$uniqueIdSubstring@gmail.com"",
+  ""address"": ""QATest"",
+  ""phone"": ""1148784215"",
+  ""company"": ""QATest"",
+  ""external_reference"": ""QATest"",
+  ""description"": ""QATest"",
+  ""manager"": ""QATest"",
+  ""wallet"": {
+      ""address"": ""0x71C7656EC7ab88b098defB751B7401B5f6d8976F"",
+      ""network"": ""Ethereum"",
+      ""coin"": ""ETH""
+  }
+}
+",,,,29-03-2024 14:39:41,29-03-2024 14:39:41,0.004s,PASSED
+try,,,,29-03-2024 14:39:41,29-03-2024 14:39:41,0.247s,FAILED
+catch (Exception e),,,,29-03-2024 14:39:41,29-03-2024 14:39:41,0.037s,PASSED
+,,,,,,,
+Test Cases/Hasar Flow/3 Create User tipo User,,,,29-03-2024 14:39:41,29-03-2024 14:39:41,0.357s,FAILED
+uniqueId = randomUUID().toString(),,,,29-03-2024 14:39:41,29-03-2024 14:39:41,0.003s,PASSED
+"uniqueIdSubstring = replaceAll(""[^a-zA-Z0-9]"", """").substring(0, 10)",,,,29-03-2024 14:39:41,29-03-2024 14:39:41,0.001s,PASSED
+println(uniqueIdSubstring: $uniqueIdSubstring),,,,29-03-2024 14:39:41,29-03-2024 14:39:41,0.004s,PASSED
+println(uniqueId: $uniqueId),,,,29-03-2024 14:39:41,29-03-2024 14:39:41,0.002s,PASSED
+"requestBody = 
+{
+    ""user"": {
+		""username"": ""QATest$uniqueIdSubstring"",
+        ""password"": ""1234"",
+        ""role"": ""user""
+    }
+}
+",,,,29-03-2024 14:39:41,29-03-2024 14:39:41,0.002s,PASSED
+try,,,,29-03-2024 14:39:41,29-03-2024 14:39:41,0.040s,FAILED
+catch (Exception e),,,,29-03-2024 14:39:41,29-03-2024 14:39:41,0.006s,PASSED
+,,,,,,,
+Test Cases/Hasar Flow/4 auth_token_User,,,,29-03-2024 14:39:41,29-03-2024 14:39:42,0.584s,FAILED
+"current_user = ""Hasar""",,,,29-03-2024 14:39:41,29-03-2024 14:39:41,0.002s,PASSED
+"response = sendRequest(findTestObject(""Flow Admin/token"", [""url_base"":url_base, ""api_key"":api_key_user]))",,,,29-03-2024 14:39:41,29-03-2024 14:39:42,0.341s,FAILED
+,,,,,,,
+Test Cases/Hasar Flow/5 AccessToken,,,,29-03-2024 14:39:42,29-03-2024 14:39:43,0.608s,FAILED
+try,,,,29-03-2024 14:39:42,29-03-2024 14:39:42,0.061s,FAILED
+catch (Exception e),,,,29-03-2024 14:39:42,29-03-2024 14:39:42,0.011s,PASSED
