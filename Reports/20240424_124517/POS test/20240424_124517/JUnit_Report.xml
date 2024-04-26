@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="POS test" time="19.638" tests="13" failures="1" errors="0">
+   <testsuite name="POS test" tests="13" failures="1" errors="0" time="19.638" skipped="0" timestamp="24-04-2024T12:45:24" hostname="nicol - nicopc" id="Test Suites/POS test">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\Users\\nicol\\Katalon Studio\\Proyectos\\Depay\\Reports\\20240424_124517\\POS test\\20240424_124517"/>
+         <property name="logFiles" value="C:\\Users\\nicol\\Katalon Studio\\Proyectos\\Depay\\Reports\\20240424_124517\\POS test\\20240424_124517\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="nicol - nicopc"/>
+         <property name="hostAddress" value="192.168.100.4"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="9.3.2.212"/>
+      </properties>
+      <testcase name="Test Cases/Flow POS/1 auth_token_Admin" time="4.41" classname="Test Cases/Flow POS/1 auth_token_Admin" status="PASSED">
+         <system-out><![CDATA[24-04-2024T12:45:24 - [TEST_CASE][PASSED] - Test Cases/Flow POS/1 auth_token_Admin: Test Cases/Flow POS/1 auth_token_Admin
+
+24-04-2024T12:45:24 - [TEST_STEP][PASSED] - current_user = "Hasar": null
+
+24-04-2024T12:45:25 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Flow Admin/token", ["url_base":url_base, "api_key":api_key_hasar])): Send request successfully
+
+24-04-2024T12:45:28 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240424_124517\POS test\20240424_124517\requests\main\0.har
+
+24-04-2024T12:45:28 - [MESSAGE][PASSED] - Send request successfully
+
+24-04-2024T12:45:28 - [TEST_STEP][PASSED] - responseBody = response.getResponseText(): null
+
+24-04-2024T12:45:28 - [TEST_STEP][PASSED] - print(responseBody): null
+
+24-04-2024T12:45:28 - [TEST_STEP][PASSED] - jsonSlurper = new groovy.json.JsonSlurper(): null
+
+24-04-2024T12:45:28 - [TEST_STEP][PASSED] - jsonResponse = jsonSlurper.parseText(responseBody): null
+
+24-04-2024T12:45:28 - [TEST_STEP][PASSED] - token = accessToken: null
+
+24-04-2024T12:45:28 - [TEST_STEP][PASSED] - println("Response Body: " + responseBody): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Flow POS/2 Client create" time="1.406" classname="Test Cases/Flow POS/2 Client create" status="PASSED">
+         <system-out><![CDATA[24-04-2024T12:45:28 - [TEST_CASE][PASSED] - Test Cases/Flow POS/2 Client create: Test Cases/Flow POS/2 Client create
+
+24-04-2024T12:45:29 - [TEST_STEP][PASSED] - uniqueId = randomUUID().toString(): null
+
+24-04-2024T12:45:29 - [TEST_STEP][PASSED] - uniqueIdSubstring = replaceAll("[^a-zA-Z0-9]", "").substring(0, 10): null
+
+24-04-2024T12:45:29 - [TEST_STEP][PASSED] - println(uniqueIdSubstring: $uniqueIdSubstring): null
+
+24-04-2024T12:45:29 - [TEST_STEP][PASSED] - println(uniqueId: $uniqueId): null
+
+24-04-2024T12:45:29 - [TEST_STEP][PASSED] - requestBody = 
+{
+  "name": "QATestPOS",
+  "email": "QATest$uniqueIdSubstring@gmail.com",
+  "phone": "22222",
+  "company": "Depay",
+"depay_fee":"0.04",
+  "external_reference": "Depay"
+}
+: null
+
+24-04-2024T12:45:29 - [TEST_STEP][PASSED] - try: null
+
+24-04-2024T12:45:29 - [TEST_STEP][PASSED] - urlBase = url_base + "/client/create": null
+
+24-04-2024T12:45:29 - [TEST_STEP][PASSED] - request = withRestRequestMethod("POST").build(): null
+
+24-04-2024T12:45:29 - [TEST_STEP][PASSED] - println(Request URL: $request.getRestUrl()): null
+
+24-04-2024T12:45:29 - [TEST_STEP][PASSED] - println(Request Body: $request.getBodyContent()): null
+
+24-04-2024T12:45:29 - [TEST_STEP][PASSED] - response = sendRequest(request, CONTINUE_ON_FAILURE): Send request successfully
+
+24-04-2024T12:45:30 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240424_124517\POS test\20240424_124517\requests\main\1.har
+
+24-04-2024T12:45:30 - [MESSAGE][PASSED] - Send request successfully
+
+24-04-2024T12:45:30 - [TEST_STEP][PASSED] - println(Response Code: $response.getStatusCode()): null
+
+24-04-2024T12:45:30 - [TEST_STEP][PASSED] - println(Response: $response.getResponseText()): null
+
+24-04-2024T12:45:30 - [TEST_STEP][PASSED] - if (response.getStatusCode() >= 200 && response.getStatusCode() < 300): null
+
+24-04-2024T12:45:30 - [TEST_STEP][PASSED] - println("Petición enviada con éxito."): null
+
+24-04-2024T12:45:30 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+24-04-2024T12:45:30 - [TEST_STEP][PASSED] - print(jsonResponse): null
+
+24-04-2024T12:45:30 - [TEST_STEP][PASSED] - client_uuid = uuid: null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Flow POS/3 Create Customer" time="1.149" classname="Test Cases/Flow POS/3 Create Customer" status="PASSED">
+         <system-out><![CDATA[24-04-2024T12:45:30 - [TEST_CASE][PASSED] - Test Cases/Flow POS/3 Create Customer: Test Cases/Flow POS/3 Create Customer
+
+24-04-2024T12:45:30 - [TEST_STEP][PASSED] - uniqueId = randomUUID().toString(): null
+
+24-04-2024T12:45:30 - [TEST_STEP][PASSED] - uniqueIdSubstring = replaceAll("[^a-zA-Z0-9]", "").substring(0, 10): null
+
+24-04-2024T12:45:30 - [TEST_STEP][PASSED] - println(uniqueIdSubstring: $uniqueIdSubstring): null
+
+24-04-2024T12:45:30 - [TEST_STEP][PASSED] - println(uniqueId: $uniqueId): null
+
+24-04-2024T12:45:30 - [TEST_STEP][PASSED] - requestBody = 
+{
+  "name": "QATestPOS",
+  "email": "QATest$uniqueIdSubstring@gmail.com",
+  "address": "QATest",
+  "phone": "1148784215",
+  "company": "QATest",
+  "external_reference": "QATest$uniqueIdSubstring",
+"depay_fee":"0.04",
+  "description": "QATest",
+  "manager": "QATest",
+  "wallet": {
+      "address": "0x71C7656EC7ab88b098defB751B7401B5f6d8976F",
+      "network": "Ethereum",
+      "coin": "ETH"
+  }
+}
+: null
+
+24-04-2024T12:45:30 - [TEST_STEP][PASSED] - try: null
+
+24-04-2024T12:45:30 - [TEST_STEP][PASSED] - client_uuid = client_uuid: null
+
+24-04-2024T12:45:30 - [TEST_STEP][PASSED] - urlBase = url_base + "/customer?client_uuid=" + client_uuid: null
+
+24-04-2024T12:45:30 - [TEST_STEP][PASSED] - request = withRestRequestMethod("POST").build(): null
+
+24-04-2024T12:45:30 - [TEST_STEP][PASSED] - response = sendRequest(request, CONTINUE_ON_FAILURE): Send request successfully
+
+24-04-2024T12:45:31 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240424_124517\POS test\20240424_124517\requests\main\2.har
+
+24-04-2024T12:45:31 - [MESSAGE][PASSED] - Send request successfully
+
+24-04-2024T12:45:31 - [TEST_STEP][PASSED] - println(Response Code: $response.getStatusCode()): null
+
+24-04-2024T12:45:31 - [TEST_STEP][PASSED] - println(Response: $response.getResponseText()): null
+
+24-04-2024T12:45:31 - [TEST_STEP][PASSED] - if (response.getStatusCode() >= 200 && response.getStatusCode() < 300): null
+
+24-04-2024T12:45:31 - [TEST_STEP][PASSED] - println("Petición enviada con éxito."): null
+
+24-04-2024T12:45:31 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+24-04-2024T12:45:31 - [TEST_STEP][PASSED] - print(jsonResponse): null
+
+24-04-2024T12:45:31 - [TEST_STEP][PASSED] - customer_uuid = uuid: null
+
+24-04-2024T12:45:31 - [TEST_STEP][PASSED] - external_Customer = external_reference: null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Flow POS/4 Create User tipo User" time="1.338" classname="Test Cases/Flow POS/4 Create User tipo User" status="PASSED">
+         <system-out><![CDATA[24-04-2024T12:45:31 - [TEST_CASE][PASSED] - Test Cases/Flow POS/4 Create User tipo User: Test Cases/Flow POS/4 Create User tipo User
+
+24-04-2024T12:45:31 - [TEST_STEP][PASSED] - uniqueId = randomUUID().toString(): null
+
+24-04-2024T12:45:31 - [TEST_STEP][PASSED] - uniqueIdSubstring = replaceAll("[^a-zA-Z0-9]", "").substring(0, 10): null
+
+24-04-2024T12:45:31 - [TEST_STEP][PASSED] - println(uniqueIdSubstring: $uniqueIdSubstring): null
+
+24-04-2024T12:45:31 - [TEST_STEP][PASSED] - println(uniqueId: $uniqueId): null
+
+24-04-2024T12:45:31 - [TEST_STEP][PASSED] - requestBody = 
+{
+    "user": {
+		"username": "QATest$uniqueIdSubstring",
+        "password": "1234",
+        "role": "user"
+    }
+}
+: null
+
+24-04-2024T12:45:31 - [TEST_STEP][PASSED] - try: null
+
+24-04-2024T12:45:31 - [TEST_STEP][PASSED] - ClientUUID = client_uuid: null
+
+24-04-2024T12:45:31 - [TEST_STEP][PASSED] - CustomerUUID = customer_uuid: null
+
+24-04-2024T12:45:31 - [TEST_STEP][PASSED] - urlBase = url_base + /user/create?collectorId=$CustomerUUID: null
+
+24-04-2024T12:45:31 - [TEST_STEP][PASSED] - request = withRestRequestMethod("POST").build(): null
+
+24-04-2024T12:45:31 - [TEST_STEP][PASSED] - println(Request URL: $request.getRestUrl()): null
+
+24-04-2024T12:45:31 - [TEST_STEP][PASSED] - println(Request Body: $request.getBodyContent()): null
+
+24-04-2024T12:45:31 - [TEST_STEP][PASSED] - response = sendRequest(request, CONTINUE_ON_FAILURE): Send request successfully
+
+24-04-2024T12:45:32 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240424_124517\POS test\20240424_124517\requests\main\3.har
+
+24-04-2024T12:45:32 - [MESSAGE][PASSED] - Send request successfully
+
+24-04-2024T12:45:32 - [TEST_STEP][PASSED] - println(Response Code: $response.getStatusCode()): null
+
+24-04-2024T12:45:32 - [TEST_STEP][PASSED] - println(Response: $response.getResponseText()): null
+
+24-04-2024T12:45:32 - [TEST_STEP][PASSED] - if (response.getStatusCode() >= 200 && response.getStatusCode() < 300): null
+
+24-04-2024T12:45:32 - [TEST_STEP][PASSED] - println("Petición enviada con éxito."): null
+
+24-04-2024T12:45:32 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+24-04-2024T12:45:32 - [TEST_STEP][PASSED] - print(jsonResponse): null
+
+24-04-2024T12:45:32 - [TEST_STEP][PASSED] - api_key_pos = apiKey: null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Flow POS/5 auth_token_User" time="1.172" classname="Test Cases/Flow POS/5 auth_token_User" status="PASSED">
+         <system-out><![CDATA[24-04-2024T12:45:32 - [TEST_CASE][PASSED] - Test Cases/Flow POS/5 auth_token_User: Test Cases/Flow POS/5 auth_token_User
+
+24-04-2024T12:45:32 - [TEST_STEP][PASSED] - current_user = "Hasar": null
+
+24-04-2024T12:45:32 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Flow Admin/token", ["url_base":url_base, "api_key":api_key_pos])): Send request successfully
+
+24-04-2024T12:45:33 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240424_124517\POS test\20240424_124517\requests\main\4.har
+
+24-04-2024T12:45:33 - [MESSAGE][PASSED] - Send request successfully
+
+24-04-2024T12:45:33 - [TEST_STEP][PASSED] - responseBody = response.getResponseText(): null
+
+24-04-2024T12:45:33 - [TEST_STEP][PASSED] - print(responseBody): null
+
+24-04-2024T12:45:33 - [TEST_STEP][PASSED] - jsonSlurper = new groovy.json.JsonSlurper(): null
+
+24-04-2024T12:45:33 - [TEST_STEP][PASSED] - jsonResponse = jsonSlurper.parseText(responseBody): null
+
+24-04-2024T12:45:33 - [TEST_STEP][PASSED] - token_user = accessToken: null
+
+24-04-2024T12:45:33 - [TEST_STEP][PASSED] - println("Response Body: " + responseBody): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Flow POS/6 Get Access_Token" time="1.064" classname="Test Cases/Flow POS/6 Get Access_Token" status="PASSED">
+         <system-out><![CDATA[24-04-2024T12:45:33 - [TEST_CASE][PASSED] - Test Cases/Flow POS/6 Get Access_Token: Test Cases/Flow POS/6 Get Access_Token
+
+24-04-2024T12:45:34 - [TEST_STEP][PASSED] - try: null
+
+24-04-2024T12:45:34 - [TEST_STEP][PASSED] - urlBase = url_base + "/auth/access_token": null
+
+24-04-2024T12:45:34 - [TEST_STEP][PASSED] - request = withRestRequestMethod("GET").build(): null
+
+24-04-2024T12:45:34 - [TEST_STEP][PASSED] - response = sendRequest(request, CONTINUE_ON_FAILURE): Send request successfully
+
+24-04-2024T12:45:34 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240424_124517\POS test\20240424_124517\requests\main\5.har
+
+24-04-2024T12:45:34 - [MESSAGE][PASSED] - Send request successfully
+
+24-04-2024T12:45:34 - [TEST_STEP][PASSED] - println(Response Code: $response.getStatusCode()): null
+
+24-04-2024T12:45:34 - [TEST_STEP][PASSED] - println(Response: $response.getResponseText()): null
+
+24-04-2024T12:45:34 - [TEST_STEP][PASSED] - if (response.getStatusCode() >= 200 && response.getStatusCode() < 300): null
+
+24-04-2024T12:45:34 - [TEST_STEP][PASSED] - println("Petición enviada con éxito."): null
+
+24-04-2024T12:45:34 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+24-04-2024T12:45:34 - [TEST_STEP][PASSED] - print(jsonResponse): null
+
+24-04-2024T12:45:34 - [TEST_STEP][PASSED] - accessToken = access_token: null
+
+24-04-2024T12:45:34 - [TEST_STEP][PASSED] - Depay_Token_User = accessToken: null
+
+24-04-2024T12:45:34 - [TEST_STEP][PASSED] - println(Valor de Depay_token: $GlobalVariable.Depay_Token_User): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Flow POS/7 Create Store" time="0.997" classname="Test Cases/Flow POS/7 Create Store" status="PASSED">
+         <system-out><![CDATA[24-04-2024T12:45:34 - [TEST_CASE][PASSED] - Test Cases/Flow POS/7 Create Store: Test Cases/Flow POS/7 Create Store
+
+24-04-2024T12:45:35 - [TEST_STEP][PASSED] - requestBody = "
+{
+"store": {
+        "description": "TestQA",
+        "external_reference": "TEST QA",
+        "address": "TestQA",
+        "phone": "11111111111",
+        "manager": "TestQA"
+    }
+}
+": null
+
+24-04-2024T12:45:35 - [TEST_STEP][PASSED] - try: null
+
+24-04-2024T12:45:35 - [TEST_STEP][PASSED] - customer_uuid = customer_uuid: null
+
+24-04-2024T12:45:35 - [TEST_STEP][PASSED] - urlBase = url_base + "/store?collectorId=" + customer_uuid: null
+
+24-04-2024T12:45:35 - [TEST_STEP][PASSED] - request = withRestRequestMethod("POST").build(): null
+
+24-04-2024T12:45:35 - [TEST_STEP][PASSED] - println(Request URL: $request.getRestUrl()): null
+
+24-04-2024T12:45:35 - [TEST_STEP][PASSED] - println(Request Body: $request.getBodyContent()): null
+
+24-04-2024T12:45:35 - [TEST_STEP][PASSED] - response = sendRequest(request, CONTINUE_ON_FAILURE): Send request successfully
+
+24-04-2024T12:45:35 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240424_124517\POS test\20240424_124517\requests\main\6.har
+
+24-04-2024T12:45:35 - [MESSAGE][PASSED] - Send request successfully
+
+24-04-2024T12:45:35 - [TEST_STEP][PASSED] - println(Response Code: $response.getStatusCode()): null
+
+24-04-2024T12:45:35 - [TEST_STEP][PASSED] - println(Response: $response.getResponseText()): null
+
+24-04-2024T12:45:35 - [TEST_STEP][PASSED] - if (response.getStatusCode() >= 200 && response.getStatusCode() < 300): null
+
+24-04-2024T12:45:35 - [TEST_STEP][PASSED] - println("Petición enviada con éxito."): null
+
+24-04-2024T12:45:35 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+24-04-2024T12:45:35 - [TEST_STEP][PASSED] - print(jsonResponse): null
+
+24-04-2024T12:45:35 - [TEST_STEP][PASSED] - store_uuid = uuid: null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Flow POS/8 Create POS" time="1.211" classname="Test Cases/Flow POS/8 Create POS" status="PASSED">
+         <system-out><![CDATA[24-04-2024T12:45:35 - [TEST_CASE][PASSED] - Test Cases/Flow POS/8 Create POS: Test Cases/Flow POS/8 Create POS
+
+24-04-2024T12:45:36 - [TEST_STEP][PASSED] - uniqueId = randomUUID().toString(): null
+
+24-04-2024T12:45:36 - [TEST_STEP][PASSED] - uniqueIdSubstring = replaceAll("[^a-zA-Z0-9]", "").substring(0, 10): null
+
+24-04-2024T12:45:36 - [TEST_STEP][PASSED] - println(uniqueIdSubstring: $uniqueIdSubstring): null
+
+24-04-2024T12:45:36 - [TEST_STEP][PASSED] - println(uniqueId: $uniqueId): null
+
+24-04-2024T12:45:36 - [TEST_STEP][PASSED] - requestBody = 
+{
+    "pos": {
+        "description": "TestFlowPos",
+        "fixed_amount": false,
+        "category": 5,
+       "external_reference": "QATest$uniqueIdSubstring"
+    }
+}
+: null
+
+24-04-2024T12:45:36 - [TEST_STEP][PASSED] - try: null
+
+24-04-2024T12:45:36 - [TEST_STEP][PASSED] - customer_uuid = customer_uuid: null
+
+24-04-2024T12:45:36 - [TEST_STEP][PASSED] - store_uuid = store_uuid: null
+
+24-04-2024T12:45:36 - [TEST_STEP][PASSED] - urlBase = url_base + /pos/?store_uuid=$store_uuid&collectorId=$customer_uuid: null
+
+24-04-2024T12:45:36 - [TEST_STEP][PASSED] - request = withRestRequestMethod("POST").build(): null
+
+24-04-2024T12:45:36 - [TEST_STEP][PASSED] - println(Request URL: $request.getRestUrl()): null
+
+24-04-2024T12:45:36 - [TEST_STEP][PASSED] - println(Request Body: $request.getBodyContent()): null
+
+24-04-2024T12:45:36 - [TEST_STEP][PASSED] - response = sendRequest(request, CONTINUE_ON_FAILURE): Send request successfully
+
+24-04-2024T12:45:37 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240424_124517\POS test\20240424_124517\requests\main\7.har
+
+24-04-2024T12:45:37 - [MESSAGE][PASSED] - Send request successfully
+
+24-04-2024T12:45:37 - [TEST_STEP][PASSED] - println(Response Code: $response.getStatusCode()): null
+
+24-04-2024T12:45:37 - [TEST_STEP][PASSED] - println(Response: $response.getResponseText()): null
+
+24-04-2024T12:45:37 - [TEST_STEP][PASSED] - if (response.getStatusCode() >= 200 && response.getStatusCode() < 300): null
+
+24-04-2024T12:45:37 - [TEST_STEP][PASSED] - println("Petición enviada con éxito."): null
+
+24-04-2024T12:45:37 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+24-04-2024T12:45:37 - [TEST_STEP][PASSED] - print(jsonResponse): null
+
+24-04-2024T12:45:37 - [TEST_STEP][PASSED] - pos_uuid = uuid: null
+
+24-04-2024T12:45:37 - [TEST_STEP][PASSED] - external_pos = external_reference: null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Flow POS/9 Create Order" time="1.92" classname="Test Cases/Flow POS/9 Create Order" status="PASSED">
+         <system-out><![CDATA[24-04-2024T12:45:37 - [TEST_CASE][PASSED] - Test Cases/Flow POS/9 Create Order: Test Cases/Flow POS/9 Create Order
+
+24-04-2024T12:45:37 - [TEST_STEP][PASSED] - uniqueId = randomUUID().toString(): null
+
+24-04-2024T12:45:37 - [TEST_STEP][PASSED] - uniqueIdSubstring = replaceAll("[^a-zA-Z0-9]", "").substring(0, 10): null
+
+24-04-2024T12:45:37 - [TEST_STEP][PASSED] - println(uniqueIdSubstring: $uniqueIdSubstring): null
+
+24-04-2024T12:45:37 - [TEST_STEP][PASSED] - println(uniqueId: $uniqueId): null
+
+24-04-2024T12:45:37 - [TEST_STEP][PASSED] - requestBody = 
+{
+    "external_reference": "$uniqueIdSubstring",
+    "total_amount": 1000,
+    "description": "Compra en HASAR",
+    "title": "Compra en HASAR",
+    "notification_url": "https://typedwebhook.tools/webhook/fab28b4a-60d2-41e5-b3b5-e90bf9cfc903?source_news=ipn",
+   
+    "items": [
+        {
+            "sku_number": "serie",
+            "category": "category",
+            "title": "title",
+            "description": "description",
+            "quantity": 3,
+            "unit_measure": "unit",
+            "unit_price": "500",
+            "total_amount": 1500,
+            "currency_id": "USDT"
+        },
+                {
+            "sku_number": "serie 2",
+            "category": "category",
+            "title": "title",
+            "description": "description",
+            "quantity": 3,
+            "unit_measure": "unit",
+            "unit_price": "500",
+            "total_amount": 1500,
+            "currency_id": "USDT"
+        }
+    ]
+}
+: null
+
+24-04-2024T12:45:37 - [TEST_STEP][PASSED] - try: null
+
+24-04-2024T12:45:37 - [TEST_STEP][PASSED] - customer_uuid = external_Customer: null
+
+24-04-2024T12:45:37 - [TEST_STEP][PASSED] - store_id = external_pos: null
+
+24-04-2024T12:45:37 - [TEST_STEP][PASSED] - access_token = Depay_Token_User: null
+
+24-04-2024T12:45:37 - [TEST_STEP][PASSED] - urlBase = url_base + /instore/qr/seller/collectors/$customer_uuid/pos/$store_id/orders: null
+
+24-04-2024T12:45:37 - [TEST_STEP][PASSED] - request = withRestRequestMethod("POST").build(): null
+
+24-04-2024T12:45:37 - [TEST_STEP][PASSED] - println(Request URL: $request.getRestUrl()): null
+
+24-04-2024T12:45:37 - [TEST_STEP][PASSED] - println(Request Body: $request.getBodyContent()): null
+
+24-04-2024T12:45:37 - [TEST_STEP][PASSED] - response = sendRequest(request, CONTINUE_ON_FAILURE): Send request successfully
+
+24-04-2024T12:45:39 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240424_124517\POS test\20240424_124517\requests\main\8.har
+
+24-04-2024T12:45:39 - [MESSAGE][PASSED] - Send request successfully
+
+24-04-2024T12:45:39 - [TEST_STEP][PASSED] - println(Response Code: $response.getStatusCode()): null
+
+24-04-2024T12:45:39 - [TEST_STEP][PASSED] - println(Response: $response.getResponseText()): null
+
+24-04-2024T12:45:39 - [TEST_STEP][PASSED] - if (response.getStatusCode() >= 200 && response.getStatusCode() < 300): null
+
+24-04-2024T12:45:39 - [TEST_STEP][PASSED] - println("Petición enviada con éxito."): null
+
+24-04-2024T12:45:39 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+24-04-2024T12:45:39 - [TEST_STEP][PASSED] - print(jsonResponse): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Flow POS/9.1 auth_token_Admin - Copy" time="1.125" classname="Test Cases/Flow POS/9.1 auth_token_Admin - Copy" status="PASSED">
+         <system-out><![CDATA[24-04-2024T12:45:39 - [TEST_CASE][PASSED] - Test Cases/Flow POS/9.1 auth_token_Admin - Copy: Test Cases/Flow POS/9.1 auth_token_Admin - Copy
+
+24-04-2024T12:45:39 - [TEST_STEP][PASSED] - current_user = "Hasar": null
+
+24-04-2024T12:45:39 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Flow Admin/token", ["url_base":url_base, "api_key":api_key_hasar])): Send request successfully
+
+24-04-2024T12:45:40 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240424_124517\POS test\20240424_124517\requests\main\9.har
+
+24-04-2024T12:45:40 - [MESSAGE][PASSED] - Send request successfully
+
+24-04-2024T12:45:40 - [TEST_STEP][PASSED] - responseBody = response.getResponseText(): null
+
+24-04-2024T12:45:40 - [TEST_STEP][PASSED] - print(responseBody): null
+
+24-04-2024T12:45:40 - [TEST_STEP][PASSED] - jsonSlurper = new groovy.json.JsonSlurper(): null
+
+24-04-2024T12:45:40 - [TEST_STEP][PASSED] - jsonResponse = jsonSlurper.parseText(responseBody): null
+
+24-04-2024T12:45:40 - [TEST_STEP][PASSED] - token = accessToken: null
+
+24-04-2024T12:45:40 - [TEST_STEP][PASSED] - println("Response Body: " + responseBody): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Flow POS/9.2 Get exchange data order" time="1.014" classname="Test Cases/Flow POS/9.2 Get exchange data order" status="PASSED">
+         <system-out><![CDATA[24-04-2024T12:45:40 - [TEST_CASE][PASSED] - Test Cases/Flow POS/9.2 Get exchange data order: Test Cases/Flow POS/9.2 Get exchange data order
+
+24-04-2024T12:45:40 - [TEST_STEP][PASSED] - customer_uuid = customer_uuid: null
+
+24-04-2024T12:45:40 - [TEST_STEP][PASSED] - pos_uuid = pos_uuid: null
+
+24-04-2024T12:45:40 - [TEST_STEP][PASSED] - requestBody = 
+{
+  "qrValue":"Depay:$customer_uuid/$pos_uuid/false"
+
+}
+: null
+
+24-04-2024T12:45:40 - [TEST_STEP][PASSED] - try: null
+
+24-04-2024T12:45:40 - [TEST_STEP][PASSED] - urlBase = url_base + "/exchange/order/by-qr": null
+
+24-04-2024T12:45:40 - [TEST_STEP][PASSED] - request = withRestRequestMethod("POST").build(): null
+
+24-04-2024T12:45:40 - [TEST_STEP][PASSED] - response = sendRequest(request, CONTINUE_ON_FAILURE): Send request successfully
+
+24-04-2024T12:45:41 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240424_124517\POS test\20240424_124517\requests\main\10.har
+
+24-04-2024T12:45:41 - [MESSAGE][PASSED] - Send request successfully
+
+24-04-2024T12:45:41 - [TEST_STEP][PASSED] - println(Response Code: $response.getStatusCode()): null
+
+24-04-2024T12:45:41 - [TEST_STEP][PASSED] - println(Response: $response.getResponseText()): null
+
+24-04-2024T12:45:41 - [TEST_STEP][PASSED] - if (response.getStatusCode() >= 200 && response.getStatusCode() < 300): null
+
+24-04-2024T12:45:41 - [TEST_STEP][PASSED] - println("Petición enviada con éxito."): null
+
+24-04-2024T12:45:41 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+24-04-2024T12:45:41 - [TEST_STEP][PASSED] - print(jsonResponse): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Flow POS/9.3 Response Exchange" time="1.232" classname="Test Cases/Flow POS/9.3 Response Exchange" status="PASSED">
+         <system-out><![CDATA[24-04-2024T12:45:41 - [TEST_CASE][PASSED] - Test Cases/Flow POS/9.3 Response Exchange: Test Cases/Flow POS/9.3 Response Exchange
+
+24-04-2024T12:45:41 - [TEST_STEP][PASSED] - uniqueId = randomUUID().toString(): null
+
+24-04-2024T12:45:41 - [TEST_STEP][PASSED] - uniqueIdSubstring = replaceAll("[^a-zA-Z0-9]", "").substring(0, 10): null
+
+24-04-2024T12:45:41 - [TEST_STEP][PASSED] - customer_uuid = customer_uuid: null
+
+24-04-2024T12:45:41 - [TEST_STEP][PASSED] - pos_uuid = pos_uuid: null
+
+24-04-2024T12:45:41 - [TEST_STEP][PASSED] - requestBody = 
+{
+  "qrValue":"Depay:$customer_uuid/$pos_uuid/false",
+  "transaction": {
+    "wallet_origin": "QATest",
+    "transaction_number": "$uniqueIdSubstring",
+    "amount":498008,
+    "status": "closed"
+  }
+}
+: null
+
+24-04-2024T12:45:41 - [TEST_STEP][PASSED] - try: null
+
+24-04-2024T12:45:41 - [TEST_STEP][PASSED] - urlBase = url_base + "/exchange/create": null
+
+24-04-2024T12:45:41 - [TEST_STEP][PASSED] - request = withRestRequestMethod("POST").build(): null
+
+24-04-2024T12:45:41 - [TEST_STEP][PASSED] - response = sendRequest(request, CONTINUE_ON_FAILURE): Send request successfully
+
+24-04-2024T12:45:42 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240424_124517\POS test\20240424_124517\requests\main\11.har
+
+24-04-2024T12:45:42 - [MESSAGE][PASSED] - Send request successfully
+
+24-04-2024T12:45:42 - [TEST_STEP][PASSED] - println(Response Code: $response.getStatusCode()): null
+
+24-04-2024T12:45:42 - [TEST_STEP][PASSED] - println(Response: $response.getResponseText()): null
+
+24-04-2024T12:45:42 - [TEST_STEP][PASSED] - if (response.getStatusCode() >= 200 && response.getStatusCode() < 300): null
+
+24-04-2024T12:45:42 - [TEST_STEP][PASSED] - println("Petición enviada con éxito."): null
+
+24-04-2024T12:45:42 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+24-04-2024T12:45:42 - [TEST_STEP][PASSED] - print(jsonResponse): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Flow POS/9.4 Get Order" time="1.32" classname="Test Cases/Flow POS/9.4 Get Order" status="FAILED">
+         <failure type="FAILED" message="Test Cases/Flow POS/9.4 Get Order FAILED.&#xa;Reason:&#xa;com.kms.katalon.core.exception.StepFailedException: El caso de prueba falló debido a: Código de estado de respuesta inesperado (500,{&quot;statusCode&quot;:500,&quot;message&quot;:&quot;Internal server error&quot;})&#xa;	at com.kms.katalon.core.util.KeywordUtil.markFailed(KeywordUtil.java:19)&#xa;	at 9.4 Get Order.run(9.4 Get Order:65)&#xa;	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)&#xa;	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)&#xa;	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:148)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)&#xa;	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)&#xa;	at TempTestSuite1713973517691.run(TempTestSuite1713973517691.groovy:35)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#xa;	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xa;"/>
+         <system-out><![CDATA[24-04-2024T12:45:42 - [TEST_CASE][FAILED] - Test Cases/Flow POS/9.4 Get Order: Test Cases/Flow POS/9.4 Get Order FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: El caso de prueba falló debido a: Código de estado de respuesta inesperado (500,{"statusCode":500,"message":"Internal server error"})
+	at com.kms.katalon.core.util.KeywordUtil.markFailed(KeywordUtil.java:19)
+	at 9.4 Get Order.run(9.4 Get Order:65)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:148)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)
+	at TempTestSuite1713973517691.run(TempTestSuite1713973517691.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+24-04-2024T12:45:42 - [TEST_STEP][PASSED] - orderId = orderId: null
+
+24-04-2024T12:45:42 - [TEST_STEP][FAILED] - try: El caso de prueba falló debido a: Código de estado de respuesta inesperado (500,{"statusCode":500,"message":"Internal server error"})
+
+24-04-2024T12:45:42 - [TEST_STEP][PASSED] - urlBase = url_base + /order/findFullOrderLastStatus?order_uuid=$orderId: null
+
+24-04-2024T12:45:42 - [TEST_STEP][PASSED] - request = withRestRequestMethod("GET").build(): null
+
+24-04-2024T12:45:42 - [TEST_STEP][PASSED] - println(Request URL: $request.getRestUrl()): null
+
+24-04-2024T12:45:42 - [TEST_STEP][PASSED] - response = sendRequest(request, CONTINUE_ON_FAILURE): Send request successfully
+
+24-04-2024T12:45:43 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240424_124517\POS test\20240424_124517\requests\main\12.har
+
+24-04-2024T12:45:43 - [MESSAGE][PASSED] - Send request successfully
+
+24-04-2024T12:45:43 - [TEST_STEP][PASSED] - println(Response Code: $response.getStatusCode()): null
+
+24-04-2024T12:45:43 - [TEST_STEP][PASSED] - println(Response: $response.getResponseText()): null
+
+24-04-2024T12:45:43 - [TEST_STEP][PASSED] - if (response.getStatusCode() >= 200 && response.getStatusCode() < 300): null
+
+24-04-2024T12:45:43 - [TEST_STEP][FAILED] - else: El caso de prueba falló debido a: Código de estado de respuesta inesperado (500,{"statusCode":500,"message":"Internal server error"})
+
+24-04-2024T12:45:43 - [TEST_STEP][PASSED] - println("Error al enviar la petición."): null
+
+24-04-2024T12:45:43 - [TEST_STEP][FAILED] - markFailed(El caso de prueba falló debido a: Código de estado de respuesta inesperado ($response.getStatusCode(),$response.getResponseText())): El caso de prueba falló debido a: Código de estado de respuesta inesperado (500,{"statusCode":500,"message":"Internal server error"})
+
+24-04-2024T12:45:43 - [MESSAGE][FAILED] - El caso de prueba falló debido a: Código de estado de respuesta inesperado (500,{"statusCode":500,"message":"Internal server error"})]]></system-out>
+         <system-err><![CDATA[24-04-2024T12:45:42 - [TEST_CASE][FAILED] - Test Cases/Flow POS/9.4 Get Order: Test Cases/Flow POS/9.4 Get Order FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: El caso de prueba falló debido a: Código de estado de respuesta inesperado (500,{"statusCode":500,"message":"Internal server error"})
+	at com.kms.katalon.core.util.KeywordUtil.markFailed(KeywordUtil.java:19)
+	at 9.4 Get Order.run(9.4 Get Order:65)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:148)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)
+	at TempTestSuite1713973517691.run(TempTestSuite1713973517691.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-err>
+      </testcase>
+      <system-out><![CDATA[24-04-2024T12:45:24 - [TEST_SUITE][FAILED] - POS test: Test Cases/Flow POS/9.4 Get Order FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: El caso de prueba falló debido a: Código de estado de respuesta inesperado (500,{"statusCode":500,"message":"Internal server error"})
+	at com.kms.katalon.core.util.KeywordUtil.markFailed(KeywordUtil.java:19)
+	at 9.4 Get Order.run(9.4 Get Order:65)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:148)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)
+	at TempTestSuite1713973517691.run(TempTestSuite1713973517691.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-out>
+      <system-err><![CDATA[24-04-2024T12:45:24 - [TEST_SUITE][FAILED] - POS test: Test Cases/Flow POS/9.4 Get Order FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: El caso de prueba falló debido a: Código de estado de respuesta inesperado (500,{"statusCode":500,"message":"Internal server error"})
+	at com.kms.katalon.core.util.KeywordUtil.markFailed(KeywordUtil.java:19)
+	at 9.4 Get Order.run(9.4 Get Order:65)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:148)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)
+	at TempTestSuite1713973517691.run(TempTestSuite1713973517691.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-err>
+   </testsuite>
+</testsuites>

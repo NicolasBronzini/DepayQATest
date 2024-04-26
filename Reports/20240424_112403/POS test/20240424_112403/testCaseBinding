@@ -1,0 +1,11 @@
+{"testCaseName":"Test Cases/Flow POS/1 auth_token_Admin","testCaseId":"Test Cases/Flow POS/1 auth_token_Admin","iterationVariableName":""}
+{"testCaseName":"Test Cases/Flow POS/2 Client create","testCaseId":"Test Cases/Flow POS/2 Client create","iterationVariableName":""}
+{"testCaseName":"Test Cases/Flow POS/3 Create Customer","testCaseId":"Test Cases/Flow POS/3 Create Customer","iterationVariableName":""}
+{"testCaseName":"Test Cases/Flow POS/4 Create User tipo User","testCaseId":"Test Cases/Flow POS/4 Create User tipo User","iterationVariableName":""}
+{"testCaseName":"Test Cases/Flow POS/5 auth_token_User","testCaseId":"Test Cases/Flow POS/5 auth_token_User","iterationVariableName":""}
+{"testCaseName":"Test Cases/Flow POS/6 Get Access_Token","testCaseId":"Test Cases/Flow POS/6 Get Access_Token","iterationVariableName":""}
+{"testCaseName":"Test Cases/Flow POS/7 Create Store","testCaseId":"Test Cases/Flow POS/7 Create Store","iterationVariableName":""}
+{"testCaseName":"Test Cases/Flow POS/8 Create POS","testCaseId":"Test Cases/Flow POS/8 Create POS","iterationVariableName":""}
+{"testCaseName":"Test Cases/Flow POS/9 auth_token_Admin - Copy","testCaseId":"Test Cases/Flow POS/9 auth_token_Admin - Copy","iterationVariableName":""}
+{"testCaseName":"Test Cases/Flow POS/9.1 Create Order","testCaseId":"Test Cases/Flow POS/9.1 Create Order","iterationVariableName":""}
+{"testCaseName":"Test Cases/Flow POS/9.2 Get exchange data order","testCaseId":"Test Cases/Flow POS/9.2 Get exchange data order","iterationVariableName":""}

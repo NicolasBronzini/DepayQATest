@@ -2,11 +2,24 @@ import groovy.json.JsonSlurper
 import com.kms.katalon.core.testobject.ObjectRepository as ObjectRepository
 import com.kms.katalon.core.model.FailureHandling
 import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.util.KeywordUtil
+import java.util.UUID
+import groovy.json.JsonBuilder
+import groovy.json.JsonSlurper
+import com.kms.katalon.core.model.FailureHandling
+import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+import com.kms.katalon.core.testobject.ObjectRepository as ObjectRepository
+import com.kms.katalon.core.model.FailureHandling
+import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import java.util.UUID
 import groovy.json.JsonBuilder
-
-
+import com.kms.katalon.core.testobject.ObjectRepository as ObjectRepository
+import com.kms.katalon.core.model.FailureHandling
+import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+import java.util.UUID
+import groovy.json.JsonBuilder
 
 // Generar un UUID único
 def uniqueId = UUID.randomUUID().toString()
@@ -24,6 +37,7 @@ def requestBody = """
   "email": "QATest${uniqueIdSubstring}@gmail.com",
   "phone": "22222",
   "company": "Depay",
+"depay_fee":"0.04",
   "external_reference": "Depay"
 }
 """
@@ -54,10 +68,11 @@ try {
     // Enviar la solicitud
     def response = WS.sendRequest(request, FailureHandling.CONTINUE_ON_FAILURE)
 
-  println "Response: ${response.getResponseText()}"
+  println "Response Code: ${response.getStatusCode()}"
+    println "Response: ${response.getResponseText()}"
 
     // Manejar la respuesta
-    if (response) {
+   if (response.getStatusCode() >= 200 && response.getStatusCode() < 300){
         println "Petición enviada con éxito."
    
 		// Convertir la respuesta JSON en un objeto Groovy
@@ -65,9 +80,11 @@ try {
 		print jsonResponse
 	GlobalVariable.client_uuid = jsonResponse.data.uuid
 		
-    } else {
-        println "Error al enviar la petición."
-    }
+   } else {
+		println "Error al enviar la petición."
+   KeywordUtil.markFailed("El caso de prueba falló debido a: Código de estado de respuesta inesperado (${response.getStatusCode()})")
+}
 } catch (Exception e) {
-    println "Error al construir o enviar la solicitud: ${e.getMessage()}"
+ println "Error al construir o enviar la solicitud: ${e.getMessage()}"
+KeywordUtil.markFailed("El caso de prueba falló debido a: ${e.getMessage()}")
 }

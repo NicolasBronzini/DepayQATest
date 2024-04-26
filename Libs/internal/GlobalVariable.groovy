@@ -44,11 +44,6 @@ Profile Hasar : Tipo Admin</p>
     public static Object api_key_user
      
     /**
-     * <p>Profile default : Token del user tipo user</p>
-     */
-    public static Object access_token
-     
-    /**
      * <p>Profile default : UUID cliente ecomercce</p>
      */
     public static Object client_uuid
@@ -62,6 +57,51 @@ Profile Hasar : Tipo Admin</p>
      * <p>Profile default : token_Admin</p>
      */
     public static Object token_Admin
+     
+    /**
+     * <p>Profile default : Uuid de la orden</p>
+     */
+    public static Object orderId
+     
+    /**
+     * <p>Profile default : User tipo user POS</p>
+     */
+    public static Object api_key_pos
+     
+    /**
+     * <p>Profile default : Depay token para hacer peticiones desde un admin para un user</p>
+     */
+    public static Object Depay_Token_User
+     
+    /**
+     * <p>Profile default : store uuid del customer</p>
+     */
+    public static Object store_uuid
+     
+    /**
+     * <p>Profile default : token tipo user</p>
+     */
+    public static Object token_user
+     
+    /**
+     * <p>Profile default :  uuid del point of sales</p>
+     */
+    public static Object pos_uuid
+     
+    /**
+     * <p>Profile default : external reference customer</p>
+     */
+    public static Object external_Customer
+     
+    /**
+     * <p>Profile default : external reference point of sales</p>
+     */
+    public static Object external_pos
+     
+    /**
+     * <p>Profile default : orderData de lectura de exchange</p>
+     */
+    public static Object orderData
      
     /**
      * <p>Profile Hasar : Distentivo para testear user</p>
@@ -81,10 +121,18 @@ Profile Hasar : Tipo Admin</p>
             token = selectedVariables['token']
             customer_uuid = selectedVariables['customer_uuid']
             api_key_user = selectedVariables['api_key_user']
-            access_token = selectedVariables['access_token']
             client_uuid = selectedVariables['client_uuid']
             api_key_ecommerce = selectedVariables['api_key_ecommerce']
             token_Admin = selectedVariables['token_Admin']
+            orderId = selectedVariables['orderId']
+            api_key_pos = selectedVariables['api_key_pos']
+            Depay_Token_User = selectedVariables['Depay_Token_User']
+            store_uuid = selectedVariables['store_uuid']
+            token_user = selectedVariables['token_user']
+            pos_uuid = selectedVariables['pos_uuid']
+            external_Customer = selectedVariables['external_Customer']
+            external_pos = selectedVariables['external_pos']
+            orderData = selectedVariables['orderData']
             current_user = selectedVariables['current_user']
             
         } catch (Exception e) {

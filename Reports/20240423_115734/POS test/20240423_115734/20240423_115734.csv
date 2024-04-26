@@ -1,0 +1,86 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+POS test,,,,23-04-2024 11:57:40,23-04-2024 11:57:50,10.728s,PASSED
+,,,,,,,
+Test Cases/Flow POS/1 auth_token_Admin,,,,23-04-2024 11:57:40,23-04-2024 11:57:44,3.826s,PASSED
+"current_user = ""Hasar""",,,,23-04-2024 11:57:40,23-04-2024 11:57:41,0.476s,PASSED
+"response = sendRequest(findTestObject(""Flow Admin/token"", [""url_base"":url_base, ""api_key"":api_key_hasar]))",,,,23-04-2024 11:57:41,23-04-2024 11:57:44,2.851s,PASSED
+responseBody = response.getResponseText(),,,,23-04-2024 11:57:44,23-04-2024 11:57:44,0.027s,PASSED
+print(responseBody),,,,23-04-2024 11:57:44,23-04-2024 11:57:44,0.006s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,23-04-2024 11:57:44,23-04-2024 11:57:44,0.025s,PASSED
+jsonResponse = jsonSlurper.parseText(responseBody),,,,23-04-2024 11:57:44,23-04-2024 11:57:44,0.026s,PASSED
+token = accessToken,,,,23-04-2024 11:57:44,23-04-2024 11:57:44,0.018s,PASSED
+"println(""Response Body: "" + responseBody)",,,,23-04-2024 11:57:44,23-04-2024 11:57:44,0.008s,PASSED
+,,,,,,,
+Test Cases/Flow POS/2 Client create,,,,23-04-2024 11:57:44,23-04-2024 11:57:45,1.314s,PASSED
+uniqueId = randomUUID().toString(),,,,23-04-2024 11:57:44,23-04-2024 11:57:44,0.010s,PASSED
+"uniqueIdSubstring = replaceAll(""[^a-zA-Z0-9]"", """").substring(0, 10)",,,,23-04-2024 11:57:44,23-04-2024 11:57:44,0.012s,PASSED
+println(uniqueIdSubstring: $uniqueIdSubstring),,,,23-04-2024 11:57:44,23-04-2024 11:57:44,0.047s,PASSED
+println(uniqueId: $uniqueId),,,,23-04-2024 11:57:44,23-04-2024 11:57:44,0.004s,PASSED
+"requestBody = 
+{
+  ""name"": ""QATestPOS"",
+  ""email"": ""QATest$uniqueIdSubstring@gmail.com"",
+  ""phone"": ""22222"",
+  ""company"": ""Depay"",
+""depay_fee"":""0.04"",
+  ""external_reference"": ""Depay""
+}
+",,,,23-04-2024 11:57:44,23-04-2024 11:57:44,0.002s,PASSED
+try,,,,23-04-2024 11:57:44,23-04-2024 11:57:45,0.936s,PASSED
+,,,,,,,
+Test Cases/Flow POS/3 Create Customer,,,,23-04-2024 11:57:45,23-04-2024 11:57:46,1.129s,PASSED
+uniqueId = randomUUID().toString(),,,,23-04-2024 11:57:45,23-04-2024 11:57:45,0.001s,PASSED
+"uniqueIdSubstring = replaceAll(""[^a-zA-Z0-9]"", """").substring(0, 10)",,,,23-04-2024 11:57:45,23-04-2024 11:57:45,0.001s,PASSED
+println(uniqueIdSubstring: $uniqueIdSubstring),,,,23-04-2024 11:57:45,23-04-2024 11:57:45,0.001s,PASSED
+println(uniqueId: $uniqueId),,,,23-04-2024 11:57:45,23-04-2024 11:57:45,0.002s,PASSED
+"requestBody = 
+{
+  ""name"": ""QATestPOS"",
+  ""email"": ""QATest$uniqueIdSubstring@gmail.com"",
+  ""address"": ""QATest"",
+  ""phone"": ""1148784215"",
+  ""company"": ""QATest"",
+  ""external_reference"": ""QATest"",
+""depay_fee"":""0.04"",
+  ""description"": ""QATest"",
+  ""manager"": ""QATest"",
+  ""wallet"": {
+      ""address"": ""0x71C7656EC7ab88b098defB751B7401B5f6d8976F"",
+      ""network"": ""Ethereum"",
+      ""coin"": ""ETH""
+  }
+}
+",,,,23-04-2024 11:57:45,23-04-2024 11:57:45,0.002s,PASSED
+try,,,,23-04-2024 11:57:45,23-04-2024 11:57:46,0.896s,PASSED
+,,,,,,,
+Test Cases/Flow POS/4 Create User tipo User,,,,23-04-2024 11:57:46,23-04-2024 11:57:47,1.228s,PASSED
+uniqueId = randomUUID().toString(),,,,23-04-2024 11:57:46,23-04-2024 11:57:46,0.007s,PASSED
+"uniqueIdSubstring = replaceAll(""[^a-zA-Z0-9]"", """").substring(0, 10)",,,,23-04-2024 11:57:46,23-04-2024 11:57:46,0.007s,PASSED
+println(uniqueIdSubstring: $uniqueIdSubstring),,,,23-04-2024 11:57:46,23-04-2024 11:57:46,0.002s,PASSED
+println(uniqueId: $uniqueId),,,,23-04-2024 11:57:46,23-04-2024 11:57:46,0.002s,PASSED
+"requestBody = 
+{
+    ""user"": {
+		""username"": ""QATest$uniqueIdSubstring"",
+        ""password"": ""1234"",
+        ""role"": ""user""
+    }
+}
+",,,,23-04-2024 11:57:46,23-04-2024 11:57:46,0.001s,PASSED
+try,,,,23-04-2024 11:57:46,23-04-2024 11:57:47,1.024s,PASSED
+,,,,,,,
+Test Cases/Flow POS/5 auth_token_User,,,,23-04-2024 11:57:47,23-04-2024 11:57:48,1.081s,PASSED
+"current_user = ""Hasar""",,,,23-04-2024 11:57:47,23-04-2024 11:57:47,0.003s,PASSED
+"response = sendRequest(findTestObject(""Flow Admin/token"", [""url_base"":url_base, ""api_key"":api_key_ecommerce]))",,,,23-04-2024 11:57:47,23-04-2024 11:57:48,0.927s,PASSED
+responseBody = response.getResponseText(),,,,23-04-2024 11:57:48,23-04-2024 11:57:48,0.001s,PASSED
+print(responseBody),,,,23-04-2024 11:57:48,23-04-2024 11:57:48,0.001s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,23-04-2024 11:57:48,23-04-2024 11:57:48,0.001s,PASSED
+jsonResponse = jsonSlurper.parseText(responseBody),,,,23-04-2024 11:57:48,23-04-2024 11:57:48,0.001s,PASSED
+token_Admin = accessToken,,,,23-04-2024 11:57:48,23-04-2024 11:57:48,0.001s,PASSED
+"println(""Response Body: "" + responseBody)",,,,23-04-2024 11:57:48,23-04-2024 11:57:48,0.000s,PASSED
+,,,,,,,
+Test Cases/Flow POS/6 Get Access_Token,,,,23-04-2024 11:57:48,23-04-2024 11:57:50,1.943s,PASSED
+try,,,,23-04-2024 11:57:49,23-04-2024 11:57:49,0.868s,PASSED
+catch (Exception e),,,,23-04-2024 11:57:49,23-04-2024 11:57:50,0.027s,PASSED
+try,,,,23-04-2024 11:57:50,23-04-2024 11:57:50,0.820s,PASSED
+catch (Exception e),,,,23-04-2024 11:57:50,23-04-2024 11:57:50,0.003s,PASSED

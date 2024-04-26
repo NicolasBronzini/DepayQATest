@@ -21,23 +21,18 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluaXN0cmFkb3IiLCJzdWIiOjI0LCJyb2xlIjoic3VwZXJfYWRtaW4iLCJ1dWlkIjoiM2I5ZjJiNTQtZTQzYS00MTBmLTkzZGMtYzQxY2MwYTI5MzhiIiwiY3VzdG9tZXJfdXVpZCI6bnVsbCwiY2xpZW50X3V1aWQiOm51bGwsImlhdCI6MTcxMjI0MDIzOSwiZXhwIjoxNzEyMzI2NjM5fQ.ln3IrFIrqqORn9kiDhiq3I06_8rCMfJy4KVn8bCm2crmmDkxVT-2ojlM1FfVqlfA'</initValue>
+      <initValue>'eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluaXN0cmFkb3IiLCJzdWIiOjI0LCJyb2xlIjoic3VwZXJfYWRtaW4iLCJ1dWlkIjoiM2I5ZjJiNTQtZTQzYS00MTBmLTkzZGMtYzQxY2MwYTI5MzhiIiwiY3VzdG9tZXJfdXVpZCI6bnVsbCwiY2xpZW50X3V1aWQiOm51bGwsImlhdCI6MTcxMzgwMjYxMSwiZXhwIjoxNzEzODg5MDExfQ.f_1vDj_JP6SpTvss_79knq8v0l5jjR7gOuVfTDRVbxnXb81gNbHX6roaVN1AfWrP'</initValue>
       <name>token</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>uuid del customer</description>
-      <initValue>'3442b649-e2c8-4019-894e-05edb2607cb4'</initValue>
+      <initValue>''</initValue>
       <name>customer_uuid</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>Api_key del usuario creado</description>
       <initValue>''</initValue>
       <name>api_key_user</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description>Token del user tipo user</description>
-      <initValue>'DEPAY_TOKEN-518bb448c6e8f472297b80443d78d3f5803d05e77cc6ba4aef2da7aa95f38d12\r\n'</initValue>
-      <name>access_token</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>UUID cliente ecomercce</description>
@@ -53,5 +48,50 @@
       <description>token_Admin</description>
       <initValue>''</initValue>
       <name>token_Admin</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Uuid de la orden</description>
+      <initValue>''</initValue>
+      <name>orderId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>User tipo user POS</description>
+      <initValue>''</initValue>
+      <name>api_key_pos</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Depay token para hacer peticiones desde un admin para un user</description>
+      <initValue>''</initValue>
+      <name>Depay_Token_User</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>store uuid del customer</description>
+      <initValue>''</initValue>
+      <name>store_uuid</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>token tipo user</description>
+      <initValue>''</initValue>
+      <name>token_user</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description> uuid del point of sales</description>
+      <initValue>''</initValue>
+      <name>pos_uuid</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>external reference customer</description>
+      <initValue>''</initValue>
+      <name>external_Customer</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>external reference point of sales</description>
+      <initValue>''</initValue>
+      <name>external_pos</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>orderData de lectura de exchange</description>
+      <initValue>''</initValue>
+      <name>orderData</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

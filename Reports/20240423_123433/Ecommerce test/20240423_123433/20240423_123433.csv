@@ -1,0 +1,132 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Ecommerce test,,,,23-04-2024 12:34:39,23-04-2024 12:34:59,19.710s,FAILED
+,,,,,,,
+Test Cases/Flow Ecommerce/1 auth_token_Admin,,,,23-04-2024 12:34:39,23-04-2024 12:34:43,4.054s,PASSED
+"current_user = ""Hasar""",,,,23-04-2024 12:34:40,23-04-2024 12:34:40,0.501s,PASSED
+"response = sendRequest(findTestObject(""Flow Admin/token"", [""url_base"":url_base, ""api_key"":api_key]))",,,,23-04-2024 12:34:40,23-04-2024 12:34:43,2.845s,PASSED
+responseBody = response.getResponseText(),,,,23-04-2024 12:34:43,23-04-2024 12:34:43,0.049s,PASSED
+print(responseBody),,,,23-04-2024 12:34:43,23-04-2024 12:34:43,0.010s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,23-04-2024 12:34:43,23-04-2024 12:34:43,0.024s,PASSED
+jsonResponse = jsonSlurper.parseText(responseBody),,,,23-04-2024 12:34:43,23-04-2024 12:34:43,0.057s,PASSED
+token = accessToken,,,,23-04-2024 12:34:43,23-04-2024 12:34:43,0.020s,PASSED
+"println(""Response Body: "" + responseBody)",,,,23-04-2024 12:34:43,23-04-2024 12:34:43,0.005s,PASSED
+,,,,,,,
+Test Cases/Flow Ecommerce/2 Client create,,,,23-04-2024 12:34:43,23-04-2024 12:34:45,1.468s,PASSED
+uniqueId = randomUUID().toString(),,,,23-04-2024 12:34:44,23-04-2024 12:34:44,0.009s,PASSED
+"uniqueIdSubstring = replaceAll(""[^a-zA-Z0-9]"", """").substring(0, 10)",,,,23-04-2024 12:34:44,23-04-2024 12:34:44,0.008s,PASSED
+println(uniqueIdSubstring: $uniqueIdSubstring),,,,23-04-2024 12:34:44,23-04-2024 12:34:44,0.040s,PASSED
+println(uniqueId: $uniqueId),,,,23-04-2024 12:34:44,23-04-2024 12:34:44,0.002s,PASSED
+"requestBody = 
+{
+  ""name"": ""QATest"",
+  ""email"": ""QATest$uniqueIdSubstring@gmail.com"",
+  ""phone"": ""22222"",
+  ""company"": ""Depay"",
+""depay_fee"":""0.04"",
+  ""external_reference"": ""Depay""
+}
+",,,,23-04-2024 12:34:44,23-04-2024 12:34:44,0.002s,PASSED
+try,,,,23-04-2024 12:34:44,23-04-2024 12:34:45,1.032s,PASSED
+,,,,,,,
+Test Cases/Flow Ecommerce/3 Create Customer,,,,23-04-2024 12:34:45,23-04-2024 12:34:46,1.244s,PASSED
+uniqueId = randomUUID().toString(),,,,23-04-2024 12:34:45,23-04-2024 12:34:45,0.003s,PASSED
+"uniqueIdSubstring = replaceAll(""[^a-zA-Z0-9]"", """").substring(0, 10)",,,,23-04-2024 12:34:45,23-04-2024 12:34:45,0.002s,PASSED
+println(uniqueIdSubstring: $uniqueIdSubstring),,,,23-04-2024 12:34:45,23-04-2024 12:34:45,0.005s,PASSED
+println(uniqueId: $uniqueId),,,,23-04-2024 12:34:45,23-04-2024 12:34:45,0.004s,PASSED
+"requestBody = 
+{
+  ""name"": ""QATest"",
+  ""email"": ""QATest$uniqueIdSubstring@gmail.com"",
+  ""address"": ""QATest"",
+  ""phone"": ""1148784215"",
+  ""company"": ""QATest"",
+  ""external_reference"": ""QATest"",
+""depay_fee"":""0.04"",
+  ""description"": ""QATest"",
+  ""manager"": ""QATest"",
+  ""wallet"": {
+      ""address"": ""0x71C7656EC7ab88b098defB751B7401B5f6d8976F"",
+      ""network"": ""Ethereum"",
+      ""coin"": ""ETH""
+  }
+}
+",,,,23-04-2024 12:34:45,23-04-2024 12:34:45,0.003s,PASSED
+try,,,,23-04-2024 12:34:45,23-04-2024 12:34:46,0.908s,PASSED
+,,,,,,,
+Test Cases/Flow Ecommerce/4 Create User tipo User,,,,23-04-2024 12:34:46,23-04-2024 12:34:47,1.239s,PASSED
+uniqueId = randomUUID().toString(),,,,23-04-2024 12:34:46,23-04-2024 12:34:46,0.002s,PASSED
+"uniqueIdSubstring = replaceAll(""[^a-zA-Z0-9]"", """").substring(0, 10)",,,,23-04-2024 12:34:46,23-04-2024 12:34:46,0.002s,PASSED
+println(uniqueIdSubstring: $uniqueIdSubstring),,,,23-04-2024 12:34:46,23-04-2024 12:34:46,0.001s,PASSED
+println(uniqueId: $uniqueId),,,,23-04-2024 12:34:46,23-04-2024 12:34:46,0.002s,PASSED
+"requestBody = 
+{
+    ""user"": {
+		""username"": ""QATest$uniqueIdSubstring"",
+        ""password"": ""1234"",
+        ""role"": ""user""
+    }
+}
+",,,,23-04-2024 12:34:46,23-04-2024 12:34:46,0.001s,PASSED
+try,,,,23-04-2024 12:34:46,23-04-2024 12:34:47,1.031s,PASSED
+,,,,,,,
+Test Cases/Flow Ecommerce/5 auth_token_User,,,,23-04-2024 12:34:47,23-04-2024 12:34:49,1.199s,PASSED
+"current_user = ""Hasar""",,,,23-04-2024 12:34:48,23-04-2024 12:34:48,0.001s,PASSED
+"response = sendRequest(findTestObject(""Flow Admin/token"", [""url_base"":url_base, ""api_key"":api_key_ecommerce]))",,,,23-04-2024 12:34:48,23-04-2024 12:34:49,1.022s,PASSED
+responseBody = response.getResponseText(),,,,23-04-2024 12:34:49,23-04-2024 12:34:49,0.002s,PASSED
+print(responseBody),,,,23-04-2024 12:34:49,23-04-2024 12:34:49,0.002s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,23-04-2024 12:34:49,23-04-2024 12:34:49,0.002s,PASSED
+jsonResponse = jsonSlurper.parseText(responseBody),,,,23-04-2024 12:34:49,23-04-2024 12:34:49,0.001s,PASSED
+token_Admin = accessToken,,,,23-04-2024 12:34:49,23-04-2024 12:34:49,0.001s,PASSED
+"println(""Response Body: "" + responseBody)",,,,23-04-2024 12:34:49,23-04-2024 12:34:49,0.001s,PASSED
+,,,,,,,
+Test Cases/Flow Ecommerce/6 CreateOrder Ecommerce,,,,23-04-2024 12:34:49,23-04-2024 12:34:51,2.504s,PASSED
+uniqueId = randomUUID().toString(),,,,23-04-2024 12:34:49,23-04-2024 12:34:49,0.002s,PASSED
+"uniqueIdSubstring = replaceAll(""[^a-zA-Z0-9]"", """").substring(0, 10)",,,,23-04-2024 12:34:49,23-04-2024 12:34:49,0.001s,PASSED
+println(uniqueIdSubstring: $uniqueIdSubstring),,,,23-04-2024 12:34:49,23-04-2024 12:34:49,0.001s,PASSED
+println(uniqueId: $uniqueId),,,,23-04-2024 12:34:49,23-04-2024 12:34:49,0.001s,PASSED
+"requestBody = ""
+{
+
+   ""order"": {
+        ""external_reference"": ""QATest"",
+        ""total_amount"": 0.01,
+        ""description"": ""QATest"",
+        ""title"": ""QATest"",
+        ""notification_url"": ""https://zqmh0a9jg3.execute-api.sa-east-1.amazonaws.com/Prod/listenorder""
+    },
+    ""items"": [
+        {
+            ""sku_number"": ""QATest"",
+            ""category"": ""QATest"",
+            ""title"": ""QATest"",
+            ""description"": ""QATest"",
+            ""quantity"": 3,
+            ""unit_measure"": ""unit"",
+            ""unit_price"": ""500"",
+            ""total_amount"": 1,
+            ""currency_id"": ""USDT""
+        }
+    ]
+}
+""",,,,23-04-2024 12:34:49,23-04-2024 12:34:49,0.001s,PASSED
+try,,,,23-04-2024 12:34:49,23-04-2024 12:34:51,2.311s,PASSED
+,,,,,,,
+Test Cases/Flow Ecommerce/7 Get Order,,,,23-04-2024 12:34:51,23-04-2024 12:34:52,1.001s,PASSED
+orderId = orderId,,,,23-04-2024 12:34:51,23-04-2024 12:34:51,0.001s,PASSED
+try,,,,23-04-2024 12:34:51,23-04-2024 12:34:52,0.794s,PASSED
+,,,,,,,
+Test Cases/Flow Ecommerce/8 Create Payments,,,,23-04-2024 12:34:52,23-04-2024 12:34:53,0.972s,PASSED
+try,,,,23-04-2024 12:34:52,23-04-2024 12:34:53,0.815s,PASSED
+,,,,,,,
+Test Cases/Flow Ecommerce/9.1 Get Currency,,,,23-04-2024 12:34:53,23-04-2024 12:34:54,1.238s,PASSED
+try,,,,23-04-2024 12:34:53,23-04-2024 12:34:54,1.053s,PASSED
+,,,,,,,
+Test Cases/Flow Ecommerce/9.2 ChangeCoinOrder,,,,23-04-2024 12:34:54,23-04-2024 12:34:56,1.213s,PASSED
+try,,,,23-04-2024 12:34:55,23-04-2024 12:34:56,1.051s,PASSED
+,,,,,,,
+Test Cases/Flow Ecommerce/9.3 Get freeWallet,,,,23-04-2024 12:34:56,23-04-2024 12:34:57,1.256s,PASSED
+try,,,,23-04-2024 12:34:56,23-04-2024 12:34:57,0.891s,PASSED
+,,,,,,,
+Test Cases/Flow Ecommerce/9.4 Simulate Payments,,,,23-04-2024 12:34:57,23-04-2024 12:34:59,1.745s,FAILED
+try,,,,23-04-2024 12:34:57,23-04-2024 12:34:59,1.518s,PASSED
+catch (Exception e),,,,23-04-2024 12:34:59,23-04-2024 12:34:59,0.056s,FAILED

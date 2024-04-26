@@ -1,0 +1,12 @@
+{"testCaseName":"Test Cases/Flow Ecommerce/1 auth_token_Admin","testCaseId":"Test Cases/Flow Ecommerce/1 auth_token_Admin","iterationVariableName":""}
+{"testCaseName":"Test Cases/Flow Ecommerce/2 Client create","testCaseId":"Test Cases/Flow Ecommerce/2 Client create","iterationVariableName":""}
+{"testCaseName":"Test Cases/Flow Ecommerce/3 Create Customer","testCaseId":"Test Cases/Flow Ecommerce/3 Create Customer","iterationVariableName":""}
+{"testCaseName":"Test Cases/Flow Ecommerce/4 Create User tipo User","testCaseId":"Test Cases/Flow Ecommerce/4 Create User tipo User","iterationVariableName":""}
+{"testCaseName":"Test Cases/Flow Ecommerce/5 auth_token_User","testCaseId":"Test Cases/Flow Ecommerce/5 auth_token_User","iterationVariableName":""}
+{"testCaseName":"Test Cases/Flow Ecommerce/6 CreateOrder Ecommerce","testCaseId":"Test Cases/Flow Ecommerce/6 CreateOrder Ecommerce","iterationVariableName":""}
+{"testCaseName":"Test Cases/Flow Ecommerce/7 Get Order","testCaseId":"Test Cases/Flow Ecommerce/7 Get Order","iterationVariableName":""}
+{"testCaseName":"Test Cases/Flow Ecommerce/8 Create Payments","testCaseId":"Test Cases/Flow Ecommerce/8 Create Payments","iterationVariableName":""}
+{"testCaseName":"Test Cases/Flow Ecommerce/9.1 Get Currency","testCaseId":"Test Cases/Flow Ecommerce/9.1 Get Currency","iterationVariableName":""}
+{"testCaseName":"Test Cases/Flow Ecommerce/9.2 ChangeCoinOrder","testCaseId":"Test Cases/Flow Ecommerce/9.2 ChangeCoinOrder","iterationVariableName":""}
+{"testCaseName":"Test Cases/Flow Ecommerce/9.3 Get freeWallet","testCaseId":"Test Cases/Flow Ecommerce/9.3 Get freeWallet","iterationVariableName":""}
+{"testCaseName":"Test Cases/Flow Ecommerce/9.4 Simulate Payments","testCaseId":"Test Cases/Flow Ecommerce/9.4 Simulate Payments","iterationVariableName":""}

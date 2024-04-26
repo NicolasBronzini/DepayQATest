@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Ecommerce test" time="18.086" tests="12" failures="0" errors="0">
+   <testsuite name="Ecommerce test" tests="12" failures="0" errors="0" time="18.086" skipped="0" timestamp="22-04-2024T13:30:31" hostname="nicol - nicopc" id="Test Suites/Ecommerce test">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\Users\\nicol\\Katalon Studio\\Proyectos\\Depay\\Reports\\20240422_133024\\Ecommerce test\\20240422_133024"/>
+         <property name="logFiles" value="C:\\Users\\nicol\\Katalon Studio\\Proyectos\\Depay\\Reports\\20240422_133024\\Ecommerce test\\20240422_133024\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="nicol - nicopc"/>
+         <property name="hostAddress" value="192.168.100.4"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="9.3.2.212"/>
+      </properties>
+      <testcase name="Test Cases/Flow Ecommerce/1 auth_token_Admin" time="3.787" classname="Test Cases/Flow Ecommerce/1 auth_token_Admin" status="PASSED">
+         <system-out><![CDATA[22-04-2024T13:30:31 - [TEST_CASE][PASSED] - Test Cases/Flow Ecommerce/1 auth_token_Admin: Test Cases/Flow Ecommerce/1 auth_token_Admin
+
+22-04-2024T13:30:31 - [TEST_STEP][PASSED] - current_user = "Hasar": null
+
+22-04-2024T13:30:32 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Flow Admin/token", ["url_base":url_base, "api_key":api_key])): Send request successfully
+
+22-04-2024T13:30:34 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240422_133024\Ecommerce test\20240422_133024\requests\main\0.har
+
+22-04-2024T13:30:34 - [MESSAGE][PASSED] - Send request successfully
+
+22-04-2024T13:30:34 - [TEST_STEP][PASSED] - responseBody = response.getResponseText(): null
+
+22-04-2024T13:30:35 - [TEST_STEP][PASSED] - print(responseBody): null
+
+22-04-2024T13:30:35 - [TEST_STEP][PASSED] - jsonSlurper = new groovy.json.JsonSlurper(): null
+
+22-04-2024T13:30:35 - [TEST_STEP][PASSED] - jsonResponse = jsonSlurper.parseText(responseBody): null
+
+22-04-2024T13:30:35 - [TEST_STEP][PASSED] - token = accessToken: null
+
+22-04-2024T13:30:35 - [TEST_STEP][PASSED] - println("Response Body: " + responseBody): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Flow Ecommerce/2 Client create" time="1.305" classname="Test Cases/Flow Ecommerce/2 Client create" status="PASSED">
+         <system-out><![CDATA[22-04-2024T13:30:35 - [TEST_CASE][PASSED] - Test Cases/Flow Ecommerce/2 Client create: Test Cases/Flow Ecommerce/2 Client create
+
+22-04-2024T13:30:35 - [TEST_STEP][PASSED] - uniqueId = randomUUID().toString(): null
+
+22-04-2024T13:30:35 - [TEST_STEP][PASSED] - uniqueIdSubstring = replaceAll("[^a-zA-Z0-9]", "").substring(0, 10): null
+
+22-04-2024T13:30:35 - [TEST_STEP][PASSED] - println(uniqueIdSubstring: $uniqueIdSubstring): null
+
+22-04-2024T13:30:35 - [TEST_STEP][PASSED] - println(uniqueId: $uniqueId): null
+
+22-04-2024T13:30:35 - [TEST_STEP][PASSED] - requestBody = 
+{
+  "name": "QATest",
+  "email": "QATest$uniqueIdSubstring@gmail.com",
+  "phone": "22222",
+  "company": "Depay",
+"depay_fee":"0.04",
+  "external_reference": "Depay"
+}
+: null
+
+22-04-2024T13:30:35 - [TEST_STEP][PASSED] - try: null
+
+22-04-2024T13:30:35 - [TEST_STEP][PASSED] - urlBase = url_base + "/client/create": null
+
+22-04-2024T13:30:35 - [TEST_STEP][PASSED] - request = withRestRequestMethod("POST").build(): null
+
+22-04-2024T13:30:35 - [TEST_STEP][PASSED] - println(Request URL: $request.getRestUrl()): null
+
+22-04-2024T13:30:35 - [TEST_STEP][PASSED] - println(Request Body: $request.getBodyContent()): null
+
+22-04-2024T13:30:35 - [TEST_STEP][PASSED] - response = sendRequest(request, CONTINUE_ON_FAILURE): Send request successfully
+
+22-04-2024T13:30:36 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240422_133024\Ecommerce test\20240422_133024\requests\main\1.har
+
+22-04-2024T13:30:36 - [MESSAGE][PASSED] - Send request successfully
+
+22-04-2024T13:30:36 - [TEST_STEP][PASSED] - println(Response: $response.getResponseText()): null
+
+22-04-2024T13:30:36 - [TEST_STEP][PASSED] - if (response): null
+
+22-04-2024T13:30:36 - [TEST_STEP][PASSED] - println("Petición enviada con éxito."): null
+
+22-04-2024T13:30:36 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+22-04-2024T13:30:36 - [TEST_STEP][PASSED] - print(jsonResponse): null
+
+22-04-2024T13:30:36 - [TEST_STEP][PASSED] - client_uuid = uuid: null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Flow Ecommerce/3 Create Customer" time="1.195" classname="Test Cases/Flow Ecommerce/3 Create Customer" status="PASSED">
+         <system-out><![CDATA[22-04-2024T13:30:36 - [TEST_CASE][PASSED] - Test Cases/Flow Ecommerce/3 Create Customer: Test Cases/Flow Ecommerce/3 Create Customer
+
+22-04-2024T13:30:36 - [TEST_STEP][PASSED] - uniqueId = randomUUID().toString(): null
+
+22-04-2024T13:30:36 - [TEST_STEP][PASSED] - uniqueIdSubstring = replaceAll("[^a-zA-Z0-9]", "").substring(0, 10): null
+
+22-04-2024T13:30:36 - [TEST_STEP][PASSED] - println(uniqueIdSubstring: $uniqueIdSubstring): null
+
+22-04-2024T13:30:36 - [TEST_STEP][PASSED] - println(uniqueId: $uniqueId): null
+
+22-04-2024T13:30:36 - [TEST_STEP][PASSED] - requestBody = 
+{
+  "name": "QATest",
+  "email": "QATest$uniqueIdSubstring@gmail.com",
+  "address": "QATest",
+  "phone": "1148784215",
+  "company": "QATest",
+  "external_reference": "QATest",
+"depay_fee":"0.04",
+  "description": "QATest",
+  "manager": "QATest",
+  "wallet": {
+      "address": "0x71C7656EC7ab88b098defB751B7401B5f6d8976F",
+      "network": "Ethereum",
+      "coin": "ETH"
+  }
+}
+: null
+
+22-04-2024T13:30:36 - [TEST_STEP][PASSED] - try: null
+
+22-04-2024T13:30:36 - [TEST_STEP][PASSED] - client_uuid = client_uuid: null
+
+22-04-2024T13:30:36 - [TEST_STEP][PASSED] - urlBase = url_base + "/customer?client_uuid=" + client_uuid: null
+
+22-04-2024T13:30:36 - [TEST_STEP][PASSED] - request = withRestRequestMethod("POST").build(): null
+
+22-04-2024T13:30:36 - [TEST_STEP][PASSED] - println(Request URL: $request.getRestUrl()): null
+
+22-04-2024T13:30:36 - [TEST_STEP][PASSED] - println(Request Body: $request.getBodyContent()): null
+
+22-04-2024T13:30:36 - [TEST_STEP][PASSED] - response = sendRequest(request, CONTINUE_ON_FAILURE): Send request successfully
+
+22-04-2024T13:30:37 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240422_133024\Ecommerce test\20240422_133024\requests\main\2.har
+
+22-04-2024T13:30:37 - [MESSAGE][PASSED] - Send request successfully
+
+22-04-2024T13:30:37 - [TEST_STEP][PASSED] - println(Response: $response.getResponseText()): null
+
+22-04-2024T13:30:37 - [TEST_STEP][PASSED] - if (response): null
+
+22-04-2024T13:30:37 - [TEST_STEP][PASSED] - println("Petición enviada con éxito."): null
+
+22-04-2024T13:30:37 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+22-04-2024T13:30:37 - [TEST_STEP][PASSED] - print(jsonResponse): null
+
+22-04-2024T13:30:37 - [TEST_STEP][PASSED] - customer_uuid = uuid: null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Flow Ecommerce/4 Create User tipo Admin" time="1.173" classname="Test Cases/Flow Ecommerce/4 Create User tipo Admin" status="PASSED">
+         <system-out><![CDATA[22-04-2024T13:30:37 - [TEST_CASE][PASSED] - Test Cases/Flow Ecommerce/4 Create User tipo Admin: Test Cases/Flow Ecommerce/4 Create User tipo Admin
+
+22-04-2024T13:30:37 - [TEST_STEP][PASSED] - uniqueId = randomUUID().toString(): null
+
+22-04-2024T13:30:37 - [TEST_STEP][PASSED] - uniqueIdSubstring = replaceAll("[^a-zA-Z0-9]", "").substring(0, 10): null
+
+22-04-2024T13:30:37 - [TEST_STEP][PASSED] - println(uniqueIdSubstring: $uniqueIdSubstring): null
+
+22-04-2024T13:30:37 - [TEST_STEP][PASSED] - println(uniqueId: $uniqueId): null
+
+22-04-2024T13:30:37 - [TEST_STEP][PASSED] - requestBody = 
+{
+    "user": {
+		"username": "QATest$uniqueIdSubstring",
+        "password": "1234",
+        "role": "admin"
+    }
+}
+: null
+
+22-04-2024T13:30:37 - [TEST_STEP][PASSED] - try: null
+
+22-04-2024T13:30:37 - [TEST_STEP][PASSED] - CustomerUUID = customer_uuid: null
+
+22-04-2024T13:30:37 - [TEST_STEP][PASSED] - urlBase = url_base + "/user/create?collectorId=" + CustomerUUID: null
+
+22-04-2024T13:30:37 - [TEST_STEP][PASSED] - request = withRestRequestMethod("POST").build(): null
+
+22-04-2024T13:30:37 - [TEST_STEP][PASSED] - println(Request URL: $request.getRestUrl()): null
+
+22-04-2024T13:30:37 - [TEST_STEP][PASSED] - println(Request Body: $request.getBodyContent()): null
+
+22-04-2024T13:30:37 - [TEST_STEP][PASSED] - response = sendRequest(request, CONTINUE_ON_FAILURE): Send request successfully
+
+22-04-2024T13:30:38 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240422_133024\Ecommerce test\20240422_133024\requests\main\3.har
+
+22-04-2024T13:30:38 - [MESSAGE][PASSED] - Send request successfully
+
+22-04-2024T13:30:38 - [TEST_STEP][PASSED] - println(Response: $response.getResponseText()): null
+
+22-04-2024T13:30:38 - [TEST_STEP][PASSED] - if (response): null
+
+22-04-2024T13:30:38 - [TEST_STEP][PASSED] - println("Petición enviada con éxito."): null
+
+22-04-2024T13:30:38 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+22-04-2024T13:30:38 - [TEST_STEP][PASSED] - print(jsonResponse): null
+
+22-04-2024T13:30:38 - [TEST_STEP][PASSED] - api_key_ecommerce = apiKey: null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Flow Ecommerce/5 auth_token_Admin" time="1.167" classname="Test Cases/Flow Ecommerce/5 auth_token_Admin" status="PASSED">
+         <system-out><![CDATA[22-04-2024T13:30:38 - [TEST_CASE][PASSED] - Test Cases/Flow Ecommerce/5 auth_token_Admin: Test Cases/Flow Ecommerce/5 auth_token_Admin
+
+22-04-2024T13:30:38 - [TEST_STEP][PASSED] - current_user = "Hasar": null
+
+22-04-2024T13:30:38 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Flow Admin/token", ["url_base":url_base, "api_key":api_key_ecommerce])): Send request successfully
+
+22-04-2024T13:30:39 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240422_133024\Ecommerce test\20240422_133024\requests\main\4.har
+
+22-04-2024T13:30:39 - [MESSAGE][PASSED] - Send request successfully
+
+22-04-2024T13:30:39 - [TEST_STEP][PASSED] - responseBody = response.getResponseText(): null
+
+22-04-2024T13:30:39 - [TEST_STEP][PASSED] - print(responseBody): null
+
+22-04-2024T13:30:39 - [TEST_STEP][PASSED] - jsonSlurper = new groovy.json.JsonSlurper(): null
+
+22-04-2024T13:30:39 - [TEST_STEP][PASSED] - jsonResponse = jsonSlurper.parseText(responseBody): null
+
+22-04-2024T13:30:39 - [TEST_STEP][PASSED] - token_Admin = accessToken: null
+
+22-04-2024T13:30:39 - [TEST_STEP][PASSED] - println("Response Body: " + responseBody): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Flow Ecommerce/6 CreateOrder Ecommerce" time="2.377" classname="Test Cases/Flow Ecommerce/6 CreateOrder Ecommerce" status="PASSED">
+         <system-out><![CDATA[22-04-2024T13:30:39 - [TEST_CASE][PASSED] - Test Cases/Flow Ecommerce/6 CreateOrder Ecommerce: Test Cases/Flow Ecommerce/6 CreateOrder Ecommerce
+
+22-04-2024T13:30:40 - [TEST_STEP][PASSED] - uniqueId = randomUUID().toString(): null
+
+22-04-2024T13:30:40 - [TEST_STEP][PASSED] - uniqueIdSubstring = replaceAll("[^a-zA-Z0-9]", "").substring(0, 10): null
+
+22-04-2024T13:30:40 - [TEST_STEP][PASSED] - println(uniqueIdSubstring: $uniqueIdSubstring): null
+
+22-04-2024T13:30:40 - [TEST_STEP][PASSED] - println(uniqueId: $uniqueId): null
+
+22-04-2024T13:30:40 - [TEST_STEP][PASSED] - requestBody = "
+{
+
+   "order": {
+        "external_reference": "QATest",
+        "total_amount": 0.01,
+        "description": "QATest",
+        "title": "QATest",
+        "notification_url": "https://zqmh0a9jg3.execute-api.sa-east-1.amazonaws.com/Prod/listenorder"
+    },
+    "items": [
+        {
+            "sku_number": "QATest",
+            "category": "QATest",
+            "title": "QATest",
+            "description": "QATest",
+            "quantity": 3,
+            "unit_measure": "unit",
+            "unit_price": "500",
+            "total_amount": 1,
+            "currency_id": "USDT"
+        }
+    ]
+}
+": null
+
+22-04-2024T13:30:40 - [TEST_STEP][PASSED] - try: null
+
+22-04-2024T13:30:40 - [TEST_STEP][PASSED] - customerUUID = customer_uuid: null
+
+22-04-2024T13:30:40 - [TEST_STEP][PASSED] - urlBase = url_base + "/order/create/ecommerce?collectorId=bc80a833-c4af-4670-98bf-c0e245e7f85a": null
+
+22-04-2024T13:30:40 - [TEST_STEP][PASSED] - request = withRestRequestMethod("POST").build(): null
+
+22-04-2024T13:30:40 - [TEST_STEP][PASSED] - println(Request URL: $request.getRestUrl()): null
+
+22-04-2024T13:30:40 - [TEST_STEP][PASSED] - println(Request Body: $requestBody): null
+
+22-04-2024T13:30:40 - [TEST_STEP][PASSED] - println(Request Body: $request.getBodyContent()): null
+
+22-04-2024T13:30:40 - [TEST_STEP][PASSED] - response = sendRequest(request, CONTINUE_ON_FAILURE): Send request successfully
+
+22-04-2024T13:30:42 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240422_133024\Ecommerce test\20240422_133024\requests\main\5.har
+
+22-04-2024T13:30:42 - [MESSAGE][PASSED] - Send request successfully
+
+22-04-2024T13:30:42 - [TEST_STEP][PASSED] - println(Response: $response.getResponseText()): null
+
+22-04-2024T13:30:42 - [TEST_STEP][PASSED] - if (response): null
+
+22-04-2024T13:30:42 - [TEST_STEP][PASSED] - println("Petición enviada con éxito."): null
+
+22-04-2024T13:30:42 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+22-04-2024T13:30:42 - [TEST_STEP][PASSED] - print(jsonResponse): null
+
+22-04-2024T13:30:42 - [TEST_STEP][PASSED] - orderId = orderId: null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Flow Ecommerce/7 Get Order" time="0.921" classname="Test Cases/Flow Ecommerce/7 Get Order" status="PASSED">
+         <system-out><![CDATA[22-04-2024T13:30:42 - [TEST_CASE][PASSED] - Test Cases/Flow Ecommerce/7 Get Order: Test Cases/Flow Ecommerce/7 Get Order
+
+22-04-2024T13:30:42 - [TEST_STEP][PASSED] - orderId = orderId: null
+
+22-04-2024T13:30:42 - [TEST_STEP][PASSED] - try: null
+
+22-04-2024T13:30:42 - [TEST_STEP][PASSED] - urlBase = url_base + /order/ecommerce/$orderId: null
+
+22-04-2024T13:30:42 - [TEST_STEP][PASSED] - request = withRestRequestMethod("GET").build(): null
+
+22-04-2024T13:30:42 - [TEST_STEP][PASSED] - println(Request URL: $request.getRestUrl()): null
+
+22-04-2024T13:30:42 - [TEST_STEP][PASSED] - response = sendRequest(request, CONTINUE_ON_FAILURE): Send request successfully
+
+22-04-2024T13:30:43 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240422_133024\Ecommerce test\20240422_133024\requests\main\6.har
+
+22-04-2024T13:30:43 - [MESSAGE][PASSED] - Send request successfully
+
+22-04-2024T13:30:43 - [TEST_STEP][PASSED] - if (response): null
+
+22-04-2024T13:30:43 - [TEST_STEP][PASSED] - println("Petición enviada con éxito."): null
+
+22-04-2024T13:30:43 - [TEST_STEP][PASSED] - jsonResponse = response.getResponseText(): null
+
+22-04-2024T13:30:43 - [TEST_STEP][PASSED] - print(jsonResponse): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Flow Ecommerce/8 Create Payments" time="0.923" classname="Test Cases/Flow Ecommerce/8 Create Payments" status="PASSED">
+         <system-out><![CDATA[22-04-2024T13:30:43 - [TEST_CASE][PASSED] - Test Cases/Flow Ecommerce/8 Create Payments: Test Cases/Flow Ecommerce/8 Create Payments
+
+22-04-2024T13:30:43 - [TEST_STEP][PASSED] - try: null
+
+22-04-2024T13:30:43 - [TEST_STEP][PASSED] - orderId = orderId: null
+
+22-04-2024T13:30:43 - [TEST_STEP][PASSED] - urlBase = url_base + /payments/create/ecommerce?order_uuid=$orderId&origin=Belo&network=ETH: null
+
+22-04-2024T13:30:43 - [TEST_STEP][PASSED] - request = withRestRequestMethod("POST").build(): null
+
+22-04-2024T13:30:43 - [TEST_STEP][PASSED] - response = sendRequest(request, CONTINUE_ON_FAILURE): Send request successfully
+
+22-04-2024T13:30:44 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240422_133024\Ecommerce test\20240422_133024\requests\main\7.har
+
+22-04-2024T13:30:44 - [MESSAGE][PASSED] - Send request successfully
+
+22-04-2024T13:30:44 - [TEST_STEP][PASSED] - println(Response: $response.getResponseText()): null
+
+22-04-2024T13:30:44 - [TEST_STEP][PASSED] - if (response): null
+
+22-04-2024T13:30:44 - [TEST_STEP][PASSED] - println("Petición enviada con éxito."): null
+
+22-04-2024T13:30:44 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+22-04-2024T13:30:44 - [TEST_STEP][PASSED] - print(jsonResponse): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Flow Ecommerce/9.1 Get Currency" time="1.221" classname="Test Cases/Flow Ecommerce/9.1 Get Currency" status="PASSED">
+         <system-out><![CDATA[22-04-2024T13:30:44 - [TEST_CASE][PASSED] - Test Cases/Flow Ecommerce/9.1 Get Currency: Test Cases/Flow Ecommerce/9.1 Get Currency
+
+22-04-2024T13:30:44 - [TEST_STEP][PASSED] - try: null
+
+22-04-2024T13:30:44 - [TEST_STEP][PASSED] - orderId = orderId: null
+
+22-04-2024T13:30:44 - [TEST_STEP][PASSED] - urlBase = url_base + "/exchange/getCurrencyExchangeRate": null
+
+22-04-2024T13:30:44 - [TEST_STEP][PASSED] - request = withRestRequestMethod("GET").build(): null
+
+22-04-2024T13:30:44 - [TEST_STEP][PASSED] - response = sendRequest(request, CONTINUE_ON_FAILURE): Send request successfully
+
+22-04-2024T13:30:45 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240422_133024\Ecommerce test\20240422_133024\requests\main\8.har
+
+22-04-2024T13:30:45 - [MESSAGE][PASSED] - Send request successfully
+
+22-04-2024T13:30:45 - [TEST_STEP][PASSED] - println(Response: $response.getResponseText()): null
+
+22-04-2024T13:30:45 - [TEST_STEP][PASSED] - if (response): null
+
+22-04-2024T13:30:45 - [TEST_STEP][PASSED] - println("Petición enviada con éxito."): null
+
+22-04-2024T13:30:45 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+22-04-2024T13:30:45 - [TEST_STEP][PASSED] - print(jsonResponse): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Flow Ecommerce/9.2 ChangeCoinOrder" time="1.251" classname="Test Cases/Flow Ecommerce/9.2 ChangeCoinOrder" status="PASSED">
+         <system-out><![CDATA[22-04-2024T13:30:45 - [TEST_CASE][PASSED] - Test Cases/Flow Ecommerce/9.2 ChangeCoinOrder: Test Cases/Flow Ecommerce/9.2 ChangeCoinOrder
+
+22-04-2024T13:30:45 - [TEST_STEP][PASSED] - try: null
+
+22-04-2024T13:30:45 - [TEST_STEP][PASSED] - orderId = orderId: null
+
+22-04-2024T13:30:45 - [TEST_STEP][PASSED] - urlBase = url_base + /order/changeCoinOrder/$orderId?coin=USDT: null
+
+22-04-2024T13:30:45 - [TEST_STEP][PASSED] - request = withRestRequestMethod("PUT").build(): null
+
+22-04-2024T13:30:45 - [TEST_STEP][PASSED] - response = sendRequest(request, CONTINUE_ON_FAILURE): Send request successfully
+
+22-04-2024T13:30:46 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240422_133024\Ecommerce test\20240422_133024\requests\main\9.har
+
+22-04-2024T13:30:46 - [MESSAGE][PASSED] - Send request successfully
+
+22-04-2024T13:30:46 - [TEST_STEP][PASSED] - println(Response: $response.getResponseText()): null
+
+22-04-2024T13:30:46 - [TEST_STEP][PASSED] - if (response): null
+
+22-04-2024T13:30:46 - [TEST_STEP][PASSED] - println("Petición enviada con éxito."): null
+
+22-04-2024T13:30:46 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+22-04-2024T13:30:46 - [TEST_STEP][PASSED] - print(jsonResponse): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Flow Ecommerce/9.3 Get freeWallet" time="0.938" classname="Test Cases/Flow Ecommerce/9.3 Get freeWallet" status="PASSED">
+         <system-out><![CDATA[22-04-2024T13:30:46 - [TEST_CASE][PASSED] - Test Cases/Flow Ecommerce/9.3 Get freeWallet: Test Cases/Flow Ecommerce/9.3 Get freeWallet
+
+22-04-2024T13:30:46 - [TEST_STEP][PASSED] - try: null
+
+22-04-2024T13:30:46 - [TEST_STEP][PASSED] - orderId = orderId: null
+
+22-04-2024T13:30:46 - [TEST_STEP][PASSED] - urlBase = url_base + /payment-method/getFreeWallet?orderId=$orderId: null
+
+22-04-2024T13:30:46 - [TEST_STEP][PASSED] - request = withRestRequestMethod("POST").build(): null
+
+22-04-2024T13:30:46 - [TEST_STEP][PASSED] - response = sendRequest(request, CONTINUE_ON_FAILURE): Send request successfully
+
+22-04-2024T13:30:47 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240422_133024\Ecommerce test\20240422_133024\requests\main\10.har
+
+22-04-2024T13:30:47 - [MESSAGE][PASSED] - Send request successfully
+
+22-04-2024T13:30:47 - [TEST_STEP][PASSED] - println(Response: $response.getResponseText()): null
+
+22-04-2024T13:30:47 - [TEST_STEP][PASSED] - if (response): null
+
+22-04-2024T13:30:47 - [TEST_STEP][PASSED] - println("Petición enviada con éxito."): null
+
+22-04-2024T13:30:47 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+22-04-2024T13:30:47 - [TEST_STEP][PASSED] - print(jsonResponse): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Flow Ecommerce/9.4 Simulate Payments" time="1.588" classname="Test Cases/Flow Ecommerce/9.4 Simulate Payments" status="PASSED">
+         <system-out><![CDATA[22-04-2024T13:30:47 - [TEST_CASE][PASSED] - Test Cases/Flow Ecommerce/9.4 Simulate Payments: Test Cases/Flow Ecommerce/9.4 Simulate Payments
+
+22-04-2024T13:30:47 - [TEST_STEP][PASSED] - try: null
+
+22-04-2024T13:30:47 - [TEST_STEP][PASSED] - orderId = orderId: null
+
+22-04-2024T13:30:47 - [TEST_STEP][PASSED] - urlBase = url_base + /simulate/payments?orderId=$orderId: null
+
+22-04-2024T13:30:47 - [TEST_STEP][PASSED] - request = withRestRequestMethod("POST").build(): null
+
+22-04-2024T13:30:47 - [TEST_STEP][PASSED] - response = sendRequest(request, CONTINUE_ON_FAILURE): Send request successfully
+
+22-04-2024T13:30:49 - [MESSAGE][INFO] - HAR: C:\Users\nicol\Katalon Studio\Proyectos\Depay\Reports\20240422_133024\Ecommerce test\20240422_133024\requests\main\11.har
+
+22-04-2024T13:30:49 - [MESSAGE][PASSED] - Send request successfully
+
+22-04-2024T13:30:49 - [TEST_STEP][PASSED] - println(Response: $response.getResponseText()): null
+
+22-04-2024T13:30:49 - [TEST_STEP][PASSED] - if (response): null
+
+22-04-2024T13:30:49 - [TEST_STEP][PASSED] - println("Petición enviada con éxito."): null
+
+22-04-2024T13:30:49 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+22-04-2024T13:30:49 - [TEST_STEP][PASSED] - print(jsonResponse): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[22-04-2024T13:30:31 - [TEST_SUITE][PASSED] - Ecommerce test: Test Cases/Flow Ecommerce/9.4 Simulate Payments]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

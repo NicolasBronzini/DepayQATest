@@ -1,0 +1,198 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+POS test,,,,24-04-2024 13:11:56,24-04-2024 13:12:16,19.805s,FAILED
+,,,,,,,
+Test Cases/Flow POS/1 auth_token_Admin,,,,24-04-2024 13:11:56,24-04-2024 13:12:01,4.436s,PASSED
+"current_user = ""Hasar""",,,,24-04-2024 13:11:57,24-04-2024 13:11:57,0.746s,PASSED
+"response = sendRequest(findTestObject(""Flow Admin/token"", [""url_base"":url_base, ""api_key"":api_key_hasar]))",,,,24-04-2024 13:11:57,24-04-2024 13:12:01,3.113s,PASSED
+responseBody = response.getResponseText(),,,,24-04-2024 13:12:01,24-04-2024 13:12:01,0.031s,PASSED
+print(responseBody),,,,24-04-2024 13:12:01,24-04-2024 13:12:01,0.013s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,24-04-2024 13:12:01,24-04-2024 13:12:01,0.032s,PASSED
+jsonResponse = jsonSlurper.parseText(responseBody),,,,24-04-2024 13:12:01,24-04-2024 13:12:01,0.020s,PASSED
+token = accessToken,,,,24-04-2024 13:12:01,24-04-2024 13:12:01,0.019s,PASSED
+"println(""Response Body: "" + responseBody)",,,,24-04-2024 13:12:01,24-04-2024 13:12:01,0.008s,PASSED
+,,,,,,,
+Test Cases/Flow POS/2 Client create,,,,24-04-2024 13:12:01,24-04-2024 13:12:02,1.515s,PASSED
+uniqueId = randomUUID().toString(),,,,24-04-2024 13:12:01,24-04-2024 13:12:01,0.010s,PASSED
+"uniqueIdSubstring = replaceAll(""[^a-zA-Z0-9]"", """").substring(0, 10)",,,,24-04-2024 13:12:01,24-04-2024 13:12:01,0.009s,PASSED
+println(uniqueIdSubstring: $uniqueIdSubstring),,,,24-04-2024 13:12:01,24-04-2024 13:12:01,0.056s,PASSED
+println(uniqueId: $uniqueId),,,,24-04-2024 13:12:01,24-04-2024 13:12:01,0.007s,PASSED
+"requestBody = 
+{
+  ""name"": ""QATestPOS"",
+  ""email"": ""QATest$uniqueIdSubstring@gmail.com"",
+  ""phone"": ""22222"",
+  ""company"": ""Depay"",
+""depay_fee"":""0.04"",
+  ""external_reference"": ""Depay""
+}
+",,,,24-04-2024 13:12:01,24-04-2024 13:12:01,0.002s,PASSED
+try,,,,24-04-2024 13:12:01,24-04-2024 13:12:02,0.968s,PASSED
+,,,,,,,
+Test Cases/Flow POS/3 Create Customer,,,,24-04-2024 13:12:02,24-04-2024 13:12:03,1.190s,PASSED
+uniqueId = randomUUID().toString(),,,,24-04-2024 13:12:03,24-04-2024 13:12:03,0.004s,PASSED
+"uniqueIdSubstring = replaceAll(""[^a-zA-Z0-9]"", """").substring(0, 10)",,,,24-04-2024 13:12:03,24-04-2024 13:12:03,0.002s,PASSED
+println(uniqueIdSubstring: $uniqueIdSubstring),,,,24-04-2024 13:12:03,24-04-2024 13:12:03,0.002s,PASSED
+println(uniqueId: $uniqueId),,,,24-04-2024 13:12:03,24-04-2024 13:12:03,0.003s,PASSED
+"requestBody = 
+{
+  ""name"": ""QATestPOS"",
+  ""email"": ""QATest$uniqueIdSubstring@gmail.com"",
+  ""address"": ""QATest"",
+  ""phone"": ""1148784215"",
+  ""company"": ""QATest"",
+  ""external_reference"": ""QATest$uniqueIdSubstring"",
+""depay_fee"":""0.04"",
+  ""description"": ""QATest"",
+  ""manager"": ""QATest"",
+  ""wallet"": {
+      ""address"": ""0x71C7656EC7ab88b098defB751B7401B5f6d8976F"",
+      ""network"": ""Ethereum"",
+      ""coin"": ""ETH""
+  }
+}
+",,,,24-04-2024 13:12:03,24-04-2024 13:12:03,0.001s,PASSED
+try,,,,24-04-2024 13:12:03,24-04-2024 13:12:03,0.866s,PASSED
+,,,,,,,
+Test Cases/Flow POS/4 Create User tipo User,,,,24-04-2024 13:12:03,24-04-2024 13:12:05,1.284s,PASSED
+uniqueId = randomUUID().toString(),,,,24-04-2024 13:12:04,24-04-2024 13:12:04,0.006s,PASSED
+"uniqueIdSubstring = replaceAll(""[^a-zA-Z0-9]"", """").substring(0, 10)",,,,24-04-2024 13:12:04,24-04-2024 13:12:04,0.003s,PASSED
+println(uniqueIdSubstring: $uniqueIdSubstring),,,,24-04-2024 13:12:04,24-04-2024 13:12:04,0.003s,PASSED
+println(uniqueId: $uniqueId),,,,24-04-2024 13:12:04,24-04-2024 13:12:04,0.002s,PASSED
+"requestBody = 
+{
+    ""user"": {
+		""username"": ""QATest$uniqueIdSubstring"",
+        ""password"": ""1234"",
+        ""role"": ""user""
+    }
+}
+",,,,24-04-2024 13:12:04,24-04-2024 13:12:04,0.003s,PASSED
+try,,,,24-04-2024 13:12:04,24-04-2024 13:12:05,1.027s,PASSED
+,,,,,,,
+Test Cases/Flow POS/5 auth_token_User,,,,24-04-2024 13:12:05,24-04-2024 13:12:06,1.099s,PASSED
+"current_user = ""Hasar""",,,,24-04-2024 13:12:05,24-04-2024 13:12:05,0.002s,PASSED
+"response = sendRequest(findTestObject(""Flow Admin/token"", [""url_base"":url_base, ""api_key"":api_key_pos]))",,,,24-04-2024 13:12:05,24-04-2024 13:12:06,0.964s,PASSED
+responseBody = response.getResponseText(),,,,24-04-2024 13:12:06,24-04-2024 13:12:06,0.001s,PASSED
+print(responseBody),,,,24-04-2024 13:12:06,24-04-2024 13:12:06,0.001s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,24-04-2024 13:12:06,24-04-2024 13:12:06,0.001s,PASSED
+jsonResponse = jsonSlurper.parseText(responseBody),,,,24-04-2024 13:12:06,24-04-2024 13:12:06,0.001s,PASSED
+token_user = accessToken,,,,24-04-2024 13:12:06,24-04-2024 13:12:06,0.001s,PASSED
+"println(""Response Body: "" + responseBody)",,,,24-04-2024 13:12:06,24-04-2024 13:12:06,0.001s,PASSED
+,,,,,,,
+Test Cases/Flow POS/6 Get Access_Token,,,,24-04-2024 13:12:06,24-04-2024 13:12:07,1.119s,PASSED
+try,,,,24-04-2024 13:12:06,24-04-2024 13:12:07,0.869s,PASSED
+,,,,,,,
+Test Cases/Flow POS/7 Create Store,,,,24-04-2024 13:12:07,24-04-2024 13:12:08,0.992s,PASSED
+"requestBody = ""
+{
+""store"": {
+        ""description"": ""TestQA"",
+        ""external_reference"": ""TEST QA"",
+        ""address"": ""TestQA"",
+        ""phone"": ""11111111111"",
+        ""manager"": ""TestQA""
+    }
+}
+""",,,,24-04-2024 13:12:07,24-04-2024 13:12:07,0.001s,PASSED
+try,,,,24-04-2024 13:12:07,24-04-2024 13:12:08,0.828s,PASSED
+,,,,,,,
+Test Cases/Flow POS/8 Create POS,,,,24-04-2024 13:12:08,24-04-2024 13:12:09,1.061s,PASSED
+uniqueId = randomUUID().toString(),,,,24-04-2024 13:12:08,24-04-2024 13:12:08,0.001s,PASSED
+"uniqueIdSubstring = replaceAll(""[^a-zA-Z0-9]"", """").substring(0, 10)",,,,24-04-2024 13:12:08,24-04-2024 13:12:08,0.002s,PASSED
+println(uniqueIdSubstring: $uniqueIdSubstring),,,,24-04-2024 13:12:08,24-04-2024 13:12:08,0.002s,PASSED
+println(uniqueId: $uniqueId),,,,24-04-2024 13:12:08,24-04-2024 13:12:08,0.001s,PASSED
+"requestBody = 
+{
+    ""pos"": {
+        ""description"": ""TestFlowPos"",
+        ""fixed_amount"": false,
+        ""category"": 5,
+       ""external_reference"": ""QATest$uniqueIdSubstring""
+    }
+}
+",,,,24-04-2024 13:12:08,24-04-2024 13:12:08,0.000s,PASSED
+try,,,,24-04-2024 13:12:08,24-04-2024 13:12:09,0.805s,PASSED
+,,,,,,,
+Test Cases/Flow POS/9 Create Order,,,,24-04-2024 13:12:09,24-04-2024 13:12:11,2.086s,PASSED
+uniqueId = randomUUID().toString(),,,,24-04-2024 13:12:09,24-04-2024 13:12:09,0.003s,PASSED
+"uniqueIdSubstring = replaceAll(""[^a-zA-Z0-9]"", """").substring(0, 10)",,,,24-04-2024 13:12:09,24-04-2024 13:12:09,0.001s,PASSED
+println(uniqueIdSubstring: $uniqueIdSubstring),,,,24-04-2024 13:12:09,24-04-2024 13:12:09,0.001s,PASSED
+println(uniqueId: $uniqueId),,,,24-04-2024 13:12:09,24-04-2024 13:12:09,0.002s,PASSED
+"requestBody = 
+{
+    ""external_reference"": ""$uniqueIdSubstring"",
+    ""total_amount"": 1000,
+    ""description"": ""Compra en HASAR"",
+    ""title"": ""Compra en HASAR"",
+    ""notification_url"": ""https://typedwebhook.tools/webhook/fab28b4a-60d2-41e5-b3b5-e90bf9cfc903?source_news=ipn"",
+   
+    ""items"": [
+        {
+            ""sku_number"": ""serie"",
+            ""category"": ""category"",
+            ""title"": ""title"",
+            ""description"": ""description"",
+            ""quantity"": 3,
+            ""unit_measure"": ""unit"",
+            ""unit_price"": ""500"",
+            ""total_amount"": 1500,
+            ""currency_id"": ""USDT""
+        },
+                {
+            ""sku_number"": ""serie 2"",
+            ""category"": ""category"",
+            ""title"": ""title"",
+            ""description"": ""description"",
+            ""quantity"": 3,
+            ""unit_measure"": ""unit"",
+            ""unit_price"": ""500"",
+            ""total_amount"": 1500,
+            ""currency_id"": ""USDT""
+        }
+    ]
+}
+",,,,24-04-2024 13:12:09,24-04-2024 13:12:09,0.001s,PASSED
+try,,,,24-04-2024 13:12:09,24-04-2024 13:12:11,1.761s,PASSED
+,,,,,,,
+Test Cases/Flow POS/9.1 auth_token_Admin - Copy,,,,24-04-2024 13:12:11,24-04-2024 13:12:12,1.225s,PASSED
+"current_user = ""Hasar""",,,,24-04-2024 13:12:11,24-04-2024 13:12:11,0.001s,PASSED
+"response = sendRequest(findTestObject(""Flow Admin/token"", [""url_base"":url_base, ""api_key"":api_key_hasar]))",,,,24-04-2024 13:12:11,24-04-2024 13:12:12,1.187s,PASSED
+responseBody = response.getResponseText(),,,,24-04-2024 13:12:12,24-04-2024 13:12:12,0.001s,PASSED
+print(responseBody),,,,24-04-2024 13:12:12,24-04-2024 13:12:12,0.001s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,24-04-2024 13:12:12,24-04-2024 13:12:12,0.001s,PASSED
+jsonResponse = jsonSlurper.parseText(responseBody),,,,24-04-2024 13:12:12,24-04-2024 13:12:12,0.000s,PASSED
+token = accessToken,,,,24-04-2024 13:12:12,24-04-2024 13:12:12,0.001s,PASSED
+"println(""Response Body: "" + responseBody)",,,,24-04-2024 13:12:12,24-04-2024 13:12:12,0.000s,PASSED
+,,,,,,,
+Test Cases/Flow POS/9.2 Get exchange data order,,,,24-04-2024 13:12:12,24-04-2024 13:12:13,1.022s,PASSED
+customer_uuid = customer_uuid,,,,24-04-2024 13:12:13,24-04-2024 13:12:13,0.002s,PASSED
+pos_uuid = pos_uuid,,,,24-04-2024 13:12:13,24-04-2024 13:12:13,0.001s,PASSED
+"requestBody = 
+{
+  ""qrValue"":""Depay:$customer_uuid/$pos_uuid/false""
+
+}
+",,,,24-04-2024 13:12:13,24-04-2024 13:12:13,0.002s,PASSED
+try,,,,24-04-2024 13:12:13,24-04-2024 13:12:13,0.841s,PASSED
+,,,,,,,
+Test Cases/Flow POS/9.3 Response Exchange,,,,24-04-2024 13:12:13,24-04-2024 13:12:15,1.306s,PASSED
+uniqueId = randomUUID().toString(),,,,24-04-2024 13:12:14,24-04-2024 13:12:14,0.001s,PASSED
+"uniqueIdSubstring = replaceAll(""[^a-zA-Z0-9]"", """").substring(0, 10)",,,,24-04-2024 13:12:14,24-04-2024 13:12:14,0.000s,PASSED
+customer_uuid = customer_uuid,,,,24-04-2024 13:12:14,24-04-2024 13:12:14,0.000s,PASSED
+pos_uuid = pos_uuid,,,,24-04-2024 13:12:14,24-04-2024 13:12:14,0.001s,PASSED
+"requestBody = 
+{
+  ""qrValue"":""Depay:$customer_uuid/$pos_uuid/false"",
+  ""transaction"": {
+    ""wallet_origin"": ""QATest"",
+    ""transaction_number"": ""$uniqueIdSubstring"",
+    ""amount"":498008,
+    ""status"": ""closed""
+  }
+}
+",,,,24-04-2024 13:12:14,24-04-2024 13:12:14,0.001s,PASSED
+try,,,,24-04-2024 13:12:14,24-04-2024 13:12:15,1.090s,PASSED
+,,,,,,,
+Test Cases/Flow POS/9.4 Get Order,,,,24-04-2024 13:12:15,24-04-2024 13:12:16,1.132s,FAILED
+try,,,,24-04-2024 13:12:15,24-04-2024 13:12:16,0.845s,PASSED
+catch (Exception e),,,,24-04-2024 13:12:16,24-04-2024 13:12:16,0.063s,FAILED
